@@ -1,0 +1,379 @@
+---
+import { questions, SECTIONS } from "../data/questions";
+import "../styles/global.css";
+---
+
+<html lang="es" class="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CCSE Practice App</title>
+  </head>
+  <body
+    class="bg-slate-100 dark:bg-zinc-950 text-slate-900 dark:text-zinc-100 min-h-screen flex flex-col items-center justify-center p-4 transition-colors duration-200"
+  >
+    <h2 class="text-3xl max-w-3xl font-bold px-2 py-8 w-1/2 align-center">
+      Prueba de <span class="text-[#C60B1E]">C</span>onocimientos <span
+        class="text-[#FFC400]">C</span
+      >onstitucionales y <span class="text-[#C60B1E]">S</span>ocioculturales de
+      {" "}<span class="text-[#FFC400]">E</span>spaña (CCSE)
+    </h2>
+    <main
+      class="w-full max-w-3xl bg-white dark:bg-zinc-900 border-2 border-slate-900 dark:border-zinc-700 shadow-[8px_8px_0px_0px_rgba(0,0,0,0.15)] dark:shadow-[8px_8px_0px_0px_rgba(255,255,255,0.05)] rounded-none relative overflow-hidden"
+    >
+      <div class="h-2 w-full flex">
+        <div class="h-full w-1/4 bg-[#C60B1E]"></div>
+        <div class="h-full w-2/4 bg-[#FFC400]"></div>
+        <div class="h-full w-1/4 bg-[#C60B1E]"></div>
+      </div>
+
+      <div class="p-6 pb-0 flex justify-between items-center">
+        <span
+          class="text-xs font-black tracking-widest uppercase text-[#C60B1E] dark:text-[#FFC400]"
+        >
+          España CCSE
+        </span>
+        <button
+          id="theme-toggle"
+          class="p-2 hover:cursor-pointer border border-slate-300 dark:border-zinc-700 hover:bg-slate-100 dark:hover:bg-zinc-800 text-xs font-bold uppercase transition rounded-none flex items-center gap-1.5"
+          aria-label="Cambiar tema"
+        >
+          <span id="theme-toggle-icon">☀️</span>
+          <span id="theme-toggle-text">Light</span>
+        </button>
+      </div>
+
+      <div class="p-6 pt-4">
+        <section id="menu-view" class="space-y-6">
+          <header class="text-center space-y-2">
+            <h1
+              class="text-3xl font-black text-slate-900 dark:text-white uppercase tracking-tight"
+            >
+              Práctica Examen <span class="text-[#C60B1E]">CCSE</span>
+            </h1>
+            <p class="text-slate-600 dark:text-zinc-400 text-sm font-medium">
+              Selecciona una modalidad para comenzar
+            </p>
+          </header>
+
+          <div class="grid gap-3">
+            <button
+              id="btn-full"
+              class="w-full py-3.5 px-4 bg-[#C60B1E] hover:bg-[#a00817] text-white font-bold rounded-none transition shadow-sm border border-[#C60B1E]"
+            >
+              Examen Completo (Todas las preguntas)
+            </button>
+            <button
+              id="btn-random"
+              class="w-full py-3.5 px-4 bg-[#FFC400] hover:bg-[#e0ac00] text-slate-950 font-bold rounded-none transition shadow-sm border border-[#FFC400]"
+            >
+              Preguntas Aleatorias
+            </button>
+          </div>
+
+          <div class="space-y-3 pt-2">
+            <h2
+              class="text-xs uppercase font-bold tracking-wider text-slate-500 dark:text-zinc-400 border-b border-slate-200 dark:border-zinc-800 pb-1"
+            >
+              Por Sección
+            </h2>
+            <div class="grid gap-2">
+              {
+                SECTIONS.map((sec) => (
+                  <button
+                    data-section={sec}
+                    class="btn-section  w-full text-left py-2.5 px-4 bg-slate-50 dark:bg-zinc-800/50 hover:bg-slate-200 dark:hover:bg-zinc-800 rounded-none text-sm transition border border-slate-300 dark:border-zinc-700 flex justify-between items-center font-medium"
+                  >
+                    <span>{sec}</span>
+                    <span class="text-xs text-[#C60B1E] dark:text-[#FFC400] font-bold">
+                      →
+                    </span>
+                  </button>
+                ))
+              }
+            </div>
+          </div>
+
+          <div
+            class="mt-6 pt-4 border-t border-slate-200 dark:border-zinc-800 flex justify-between text-xs text-slate-500 dark:text-zinc-400 font-medium"
+          >
+            <span
+              >Tests completados: <strong
+                id="stat-completed"
+                class="text-slate-900 dark:text-zinc-100 font-bold">0</strong
+              ></span
+            >
+            <span
+              >Último resultado: <strong
+                id="stat-last-score"
+                class="text-slate-900 dark:text-zinc-100 font-bold">N/A</strong
+              ></span
+            >
+          </div>
+        </section>
+
+        <section id="quiz-view" class="hidden space-y-6">
+          <header
+            class="flex items-center justify-between text-sm text-slate-500 dark:text-zinc-400 border-b border-slate-200 dark:border-zinc-800 pb-3 font-semibold"
+          >
+            <span
+              id="quiz-category"
+              class="text-[#C60B1E] dark:text-[#FFC400] uppercase tracking-wide"
+            >
+              Cargando...
+            </span>
+            <span
+              id="quiz-progress"
+              class="bg-slate-200 dark:bg-zinc-800 text-slate-800 dark:text-zinc-200 px-2 py-0.5 text-xs font-mono"
+              >0/0</span
+            >
+          </header>
+
+          <div class="space-y-4">
+            <h2
+              id="quiz-question"
+              class="text-lg font-bold text-slate-900 dark:text-zinc-100 leading-snug"
+            >
+            </h2>
+            <div id="quiz-options" class="grid gap-2.5"></div>
+          </div>
+
+          <div
+            class="flex justify-between items-center pt-4 border-t border-slate-200 dark:border-zinc-800"
+          >
+            <button
+              id="btn-exit"
+              class="text-xs font-bold uppercase tracking-wider text-slate-500 hover:text-slate-900 dark:text-zinc-400 dark:hover:text-zinc-100 transition"
+              >← Salir</button
+            >
+            <button
+              id="btn-next"
+              class="hidden px-6 py-2.5 bg-[#C60B1E] hover:bg-[#a00817] text-white text-sm font-bold rounded-none transition uppercase tracking-wider shadow-sm"
+            >
+              Siguiente
+            </button>
+          </div>
+        </section>
+
+        <section id="results-view" class="hidden text-center space-y-6 py-4">
+          <div class="space-y-3">
+            <h2 class="text-2xl font-black uppercase tracking-tight">
+              ¡Test Finalizado!
+            </h2>
+            <p
+              id="results-summary"
+              class="text-4xl font-black text-[#C60B1E] dark:text-[#FFC400]"
+            >
+            </p>
+            <p
+              id="results-feedback"
+              class="text-sm font-medium text-slate-600 dark:text-zinc-400"
+            >
+            </p>
+          </div>
+
+          <button
+            id="btn-restart"
+            class="w-full py-3.5 px-4 bg-[#C60B1E] hover:bg-[#a00817] text-white font-bold rounded-none transition shadow-sm border border-[#C60B1E]"
+          >
+            Volver al Inicio
+          </button>
+        </section>
+      </div>
+    </main>
+
+    <script define:vars={{ allQuestions: questions }}>
+      let activeQuestions = [];
+      let currentIndex = 0;
+      let score = 0;
+      let selectedOption = null;
+
+      // Theme logic
+      const themeToggleBtn = document.getElementById("theme-toggle");
+      const themeToggleIcon = document.getElementById("theme-toggle-icon");
+      const themeToggleText = document.getElementById("theme-toggle-text");
+
+      function applyTheme(theme) {
+        if (theme === "dark") {
+          document.documentElement.classList.add("dark");
+          themeToggleIcon.textContent = "☀️";
+          themeToggleText.textContent = "Light";
+        } else {
+          document.documentElement.classList.remove("dark");
+          themeToggleIcon.textContent = "🌙";
+          themeToggleText.textContent = "Dark";
+        }
+      }
+
+      const initialTheme = localStorage.getItem("ccse_theme") || "dark";
+      applyTheme(initialTheme);
+
+      themeToggleBtn.addEventListener("click", () => {
+        const isDark = document.documentElement.classList.contains("dark");
+        const nextTheme = isDark ? "light" : "dark";
+        localStorage.setItem("ccse_theme", nextTheme);
+        applyTheme(nextTheme);
+      });
+
+      // DOM Elements
+      const menuView = document.getElementById("menu-view");
+      const quizView = document.getElementById("quiz-view");
+      const resultsView = document.getElementById("results-view");
+
+      const quizCategory = document.getElementById("quiz-category");
+      const quizProgress = document.getElementById("quiz-progress");
+      const quizQuestion = document.getElementById("quiz-question");
+      const quizOptions = document.getElementById("quiz-options");
+      const btnNext = document.getElementById("btn-next");
+
+      const statCompleted = document.getElementById("stat-completed");
+      const statLastScore = document.getElementById("stat-last-score");
+
+      // LocalStorage Helper
+      function loadStats() {
+        const stats = JSON.parse(
+          localStorage.getItem("ccse_stats") ||
+            '{"completed": 0, "lastScore": "N/A"}',
+        );
+        statCompleted.textContent = stats.completed;
+        statLastScore.textContent = stats.lastScore;
+      }
+
+      function saveStats(correct, total) {
+        const stats = JSON.parse(
+          localStorage.getItem("ccse_stats") ||
+            '{"completed": 0, "lastScore": "N/A"}',
+        );
+        stats.completed += 1;
+        stats.lastScore = `${correct}/${total} (${Math.round((correct / total) * 100)}%)`;
+        localStorage.setItem("ccse_stats", JSON.stringify(stats));
+        loadStats();
+      }
+
+      // Quiz Engine
+      function startQuiz(questionsList, categoryName) {
+        activeQuestions = questionsList;
+        currentIndex = 0;
+        score = 0;
+        quizCategory.textContent = categoryName;
+
+        menuView.classList.add("hidden");
+        resultsView.classList.add("hidden");
+        quizView.classList.remove("hidden");
+
+        renderQuestion();
+      }
+
+      function renderQuestion() {
+        selectedOption = null;
+        btnNext.classList.add("hidden");
+        const q = activeQuestions[currentIndex];
+
+        quizProgress.textContent = `${currentIndex + 1}/${activeQuestions.length}`;
+        quizQuestion.textContent = q.question;
+        quizOptions.innerHTML = "";
+
+        q.options.forEach((opt, idx) => {
+          const btn = document.createElement("button");
+          btn.className =
+            "w-full text-left py-3 px-4 rounded-none bg-slate-50 dark:bg-zinc-800/60 hover:bg-slate-200 dark:hover:bg-zinc-800 border border-slate-300 dark:border-zinc-700 transition text-sm flex items-center justify-between font-medium";
+          btn.innerHTML = `<span>${opt}</span><span class="status-icon font-bold"></span>`;
+          btn.onclick = () => selectOption(idx);
+          quizOptions.appendChild(btn);
+        });
+      }
+
+      function selectOption(idx) {
+        if (selectedOption !== null) return;
+        selectedOption = idx;
+
+        const q = activeQuestions[currentIndex];
+        const buttons = quizOptions.querySelectorAll("button");
+
+        buttons.forEach((btn, i) => {
+          btn.disabled = true;
+          if (i === q.correctAnswer) {
+            btn.classList.add(
+              "bg-emerald-100",
+              "dark:bg-emerald-950/80",
+              "border-emerald-600",
+              "dark:border-emerald-500",
+              "text-emerald-900",
+              "dark:text-emerald-200",
+            );
+            btn.querySelector(".status-icon").textContent = "✓";
+          } else if (i === selectedOption) {
+            btn.classList.add(
+              "bg-rose-100",
+              "dark:bg-rose-950/80",
+              "border-rose-600",
+              "dark:border-rose-500",
+              "text-rose-900",
+              "dark:text-rose-200",
+            );
+            btn.querySelector(".status-icon").textContent = "✗";
+          }
+        });
+
+        if (idx === q.correctAnswer) score++;
+        btnNext.classList.remove("hidden");
+      }
+
+      function showResults() {
+        quizView.classList.add("hidden");
+        resultsView.classList.remove("hidden");
+
+        const total = activeQuestions.length;
+        const percentage = Math.round((score / total) * 100);
+
+        document.getElementById("results-summary").textContent =
+          `${score} / ${total}`;
+        document.getElementById("results-feedback").textContent =
+          percentage >= 60
+            ? "¡Aprobado! Buen trabajo."
+            : "Necesitas practicar un poco más (se requiere un 60%).";
+
+        saveStats(score, total);
+      }
+
+      // Event Listeners
+      document.getElementById("btn-full").onclick = () => {
+        startQuiz([...allQuestions], "Examen Completo");
+      };
+
+      document.getElementById("btn-random").onclick = () => {
+        const shuffled = [...allQuestions].sort(() => Math.random() - 0.5);
+        startQuiz(shuffled, "Modo Aleatorio");
+      };
+
+      document.querySelectorAll(".btn-section").forEach((btn) => {
+        btn.onclick = () => {
+          const sec = btn.getAttribute("data-section");
+          const filtered = allQuestions.filter((q) => q.section === sec);
+          startQuiz(filtered, sec);
+        };
+      });
+
+      btnNext.onclick = () => {
+        currentIndex++;
+        if (currentIndex < activeQuestions.length) {
+          renderQuestion();
+        } else {
+          showResults();
+        }
+      };
+
+      document.getElementById("btn-exit").onclick = () => {
+        quizView.classList.add("hidden");
+        menuView.classList.remove("hidden");
+      };
+
+      document.getElementById("btn-restart").onclick = () => {
+        resultsView.classList.add("hidden");
+        menuView.classList.remove("hidden");
+      };
+
+      loadStats();
+    </script>
+  </body>
+</html>
