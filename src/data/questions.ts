@@ -29,7 +29,7 @@ export const questions: Question[] = [
     ],
     correctAnswer: 0,
     comment:
-      "España es un Estado definido en la Constitución como monarquía parlamentaria (art. 1.3).",
+      "El artículo 1.3 de la Constitución de 1978 define la forma política del Estado español como monarquía parlamentaria: el rey es jefe del Estado, pero el poder de decisión política recae en el Gobierno y en el Parlamento, elegidos democráticamente.",
   },
   {
     id: 1002,
@@ -38,7 +38,7 @@ export const questions: Question[] = [
     options: ["Constitución.", "Ley básica.", "Ordenamiento esencial."],
     correctAnswer: 0,
     comment:
-      "La Constitución de 1978 es la norma suprema del ordenamiento jurídico español.",
+      "La Constitución de 1978 es la norma suprema del ordenamiento jurídico español: todas las demás leyes, reglamentos y estatutos deben ajustarse a ella, y su reforma exige procedimientos agravados.",
   },
   {
     id: 1003,
@@ -52,7 +52,7 @@ export const questions: Question[] = [
     ],
     correctAnswer: 0,
     comment:
-      "El artículo 1.2 de la Constitución establece que la soberanía nacional reside en el pueblo español.",
+      "El artículo 1.2 establece que la soberanía nacional reside en el pueblo español, del que emanan todos los poderes del Estado; por eso las Cortes, el Gobierno y los jueces actúan en su nombre, no al revés.",
   },
   {
     id: 1004,
@@ -61,7 +61,7 @@ export const questions: Question[] = [
     options: ["una institución europea.", "un organismo español.", "una ONG."],
     correctAnswer: 1,
     comment:
-      "El Instituto de las Mujeres es un organismo público español adscrito al Ministerio de Igualdad.",
+      "El Instituto de las Mujeres es un organismo autónomo público adscrito al Ministerio de Igualdad, encargado de promover la igualdad de género y coordinar políticas contra la discriminación y la violencia machista.",
   },
   {
     id: 1005,
@@ -74,7 +74,7 @@ export const questions: Question[] = [
     ],
     correctAnswer: 0,
     comment:
-      "La sede electrónica permite realizar trámites administrativos las 24 horas del día, todos los días.",
+      "La sede electrónica de la Administración permite realizar trámites administrativos las 24 horas del día, los 365 días del año, sin necesidad de desplazarse a una oficina ni respetar horarios de atención al público.",
   },
   {
     id: 1006,
@@ -87,7 +87,7 @@ export const questions: Question[] = [
     ],
     correctAnswer: 0,
     comment:
-      "El artículo 3 de la Constitución establece el castellano como lengua oficial del Estado en todo el territorio.",
+      "El artículo 3.1 de la Constitución establece el castellano como lengua oficial del Estado en todo el territorio, con el deber de conocerla y el derecho a usarla; esto coexiste con las lenguas cooficiales de algunas comunidades.",
   },
   {
     id: 1007,
@@ -96,7 +96,7 @@ export const questions: Question[] = [
     options: ["Policía local.", "Guardia Civil.", "Policía Foral de Navarra."],
     correctAnswer: 2,
     comment:
-      "La Policía Foral de Navarra es un cuerpo policial de ámbito autonómico.",
+      "La Policía Foral de Navarra es un cuerpo policial propio de esa comunidad foral, distinto de los cuerpos de ámbito nacional (Policía Nacional, Guardia Civil) y de la policía municipal.",
   },
   {
     id: 1008,
@@ -109,7 +109,7 @@ export const questions: Question[] = [
     ],
     correctAnswer: 1,
     comment:
-      "El Cuerpo Nacional de Policía tiene competencia en todo el territorio nacional.",
+      "El Cuerpo Nacional de Policía tiene competencia en todo el territorio nacional, a diferencia de las policías autonómicas (Mossos d'Esquadra, Ertzaintza, Policía Foral), que solo actúan en su comunidad.",
   },
   {
     id: 1009,
@@ -119,7 +119,7 @@ export const questions: Question[] = [
     options: ["judicial.", "informativo.", "político."],
     correctAnswer: 0,
     comment:
-      "La Constitución separa los poderes del Estado en ejecutivo, legislativo y judicial.",
+      "La Constitución organiza el Estado según la clásica división de poderes de Montesquieu: el ejecutivo (Gobierno), el legislativo (Cortes Generales) y el judicial (jueces y tribunales), cada uno independiente de los otros.",
   },
   {
     id: 1010,
@@ -132,7 +132,7 @@ export const questions: Question[] = [
     ],
     correctAnswer: 1,
     comment:
-      "La bandera de España debe ondear en todos los edificios públicos.",
+      "La bandera de España debe ondear de forma permanente en los edificios públicos y en los actos oficiales, según la Ley 39/1981 que regula el uso de las banderas y enseñas.",
   },
   {
     id: 1011,
@@ -144,7 +144,8 @@ export const questions: Question[] = [
       "El ministro de Economía.",
     ],
     correctAnswer: 1,
-    comment: "El rey es el jefe del Estado según la Constitución (Título II).",
+    comment:
+      "El Título II de la Constitución (art. 56) establece que el rey es el jefe del Estado, símbolo de su unidad y permanencia, aunque no gobierna: sus funciones son sobre todo representativas y arbitrales.",
   },
   {
     id: 1012,
@@ -153,7 +154,7 @@ export const questions: Question[] = [
     options: ["el Estado.", "las comunidades autónomas.", "los ayuntamientos."],
     correctAnswer: 1,
     comment:
-      "La sanidad es una competencia transferida a las comunidades autónomas.",
+      "Desde el proceso de transferencias autonómicas, la gestión y organización de los servicios de sanidad corresponde a cada comunidad autónoma, mientras el Estado mantiene la coordinación general y la legislación básica.",
   },
   {
     id: 1013,
@@ -167,7 +168,7 @@ export const questions: Question[] = [
     ],
     correctAnswer: 1,
     comment:
-      "Adolfo Suárez fue el primer presidente del Gobierno tras la Constitución de 1978.",
+      "Adolfo Suárez, nombrado presidente en 1976, pilotó la Transición desde el franquismo y fue el primer presidente del Gobierno elegido democráticamente tras la aprobación de la Constitución de 1978.",
   },
   {
     id: 1014,
@@ -181,7 +182,7 @@ export const questions: Question[] = [
     ],
     correctAnswer: 1,
     comment:
-      "El Tribunal Constitucional es el máximo intérprete de la Constitución.",
+      "El Tribunal Constitucional es el máximo intérprete de la Constitución: resuelve recursos de inconstitucionalidad y de amparo, y sus sentencias vinculan a todos los poderes públicos.",
   },
   {
     id: 1015,
@@ -194,7 +195,7 @@ export const questions: Question[] = [
     ],
     correctAnswer: 1,
     comment:
-      "El rey modera el funcionamiento regular de las instituciones (art. 56 CE).",
+      "Según el artículo 56 de la Constitución, el rey modera el funcionamiento regular de las instituciones, actuando como árbitro neutral por encima de los partidos, sin ejercer poder ejecutivo directo.",
   },
   {
     id: 1016,
@@ -207,7 +208,8 @@ export const questions: Question[] = [
       "Congreso de los Diputados.",
     ],
     correctAnswer: 0,
-    comment: "El Senado es la cámara de representación territorial en España.",
+    comment:
+      "El Senado es, por definición constitucional, la cámara de representación territorial, en la que están presentes las comunidades autónomas, aunque en la práctica el Congreso concentra la mayor parte de la iniciativa legislativa.",
   },
   {
     id: 1017,
@@ -221,7 +223,7 @@ export const questions: Question[] = [
     ],
     correctAnswer: 1,
     comment:
-      "Para hacer trámites por internet con la Administración se necesita una firma o certificado electrónico.",
+      "Para identificarse y firmar documentos ante la Administración por internet se necesita un certificado o firma electrónica (por ejemplo, DNI electrónico, Cl@ve o un certificado digital reconocido).",
   },
   {
     id: 1018,
@@ -234,7 +236,7 @@ export const questions: Question[] = [
     ],
     correctAnswer: 1,
     comment:
-      "La Constitución de 1978 fue aprobada mediante referéndum popular el 6 de diciembre de 1978.",
+      "La Constitución de 1978 fue redactada por una ponencia de las Cortes Constituyentes y aprobada mediante referéndum popular el 6 de diciembre de 1978, con un amplio respaldo ciudadano.",
   },
   {
     id: 1019,
@@ -248,7 +250,7 @@ export const questions: Question[] = [
     ],
     correctAnswer: 0,
     comment:
-      "El Estatuto de Autonomía es la norma institucional básica de cada comunidad autónoma.",
+      "El Estatuto de Autonomía es la norma institucional básica de cada comunidad: fija su nombre, territorio, instituciones propias y las competencias que asume, y solo puede reformarse siguiendo un procedimiento especial.",
   },
   {
     id: 1020,
@@ -262,7 +264,7 @@ export const questions: Question[] = [
     ],
     correctAnswer: 0,
     comment:
-      "Las instalaciones culturales y deportivas locales son competencia municipal (Ayuntamiento).",
+      "Los servicios y equipamientos de proximidad, como polideportivos, bibliotecas o centros culturales municipales, son competencia del Ayuntamiento, dentro de la Administración local.",
   },
   {
     id: 1021,
@@ -271,7 +273,7 @@ export const questions: Question[] = [
     options: ["Los ayuntamientos.", "El Gobierno.", "Las Cortes Generales."],
     correctAnswer: 1,
     comment:
-      "El Gobierno dirige la administración militar y la defensa del Estado.",
+      "El artículo 97 de la Constitución atribuye al Gobierno la dirección de la Administración militar y de la defensa del Estado, si bien el mando supremo de las Fuerzas Armadas corresponde al rey de forma simbólica.",
   },
   {
     id: 1022,
@@ -280,7 +282,7 @@ export const questions: Question[] = [
     options: ["Cabildos.", "Consejos insulares.", "Centros de diputados."],
     correctAnswer: 1,
     comment:
-      "En las Islas Baleares existen los consejos insulares en lugar de diputaciones.",
+      "En las Islas Baleares, cada isla mayor (Mallorca, Menorca, Ibiza y Formentera) cuenta con un consejo insular, que asume funciones equivalentes a las de una diputación provincial además de competencias propias.",
   },
   {
     id: 1023,
@@ -289,7 +291,7 @@ export const questions: Question[] = [
     options: ["Sevilla.", "Barcelona.", "Zaragoza."],
     correctAnswer: 1,
     comment:
-      "Barcelona es la segunda ciudad más poblada de España, por delante de Sevilla y Zaragoza.",
+      "Barcelona es la segunda ciudad más poblada de España, solo por detrás de Madrid, y supera claramente en número de habitantes a Sevilla y Zaragoza.",
   },
   {
     id: 1024,
@@ -301,7 +303,8 @@ export const questions: Question[] = [
       "a los ministros.",
     ],
     correctAnswer: 0,
-    comment: "Las Cortes Generales representan al pueblo español (art. 66 CE).",
+    comment:
+      "El artículo 66 de la Constitución dice literalmente que las Cortes Generales representan al pueblo español; sus miembros son elegidos por sufragio universal para ejercer esa representación.",
   },
   {
     id: 1025,
@@ -310,7 +313,7 @@ export const questions: Question[] = [
     options: ["ejecutivo.", "legislativo.", "judicial."],
     correctAnswer: 1,
     comment:
-      "Congreso y Senado forman las Cortes Generales, que ejercen el poder legislativo.",
+      "Congreso y Senado, unidos bajo el nombre de Cortes Generales, ejercen conjuntamente el poder legislativo del Estado: elaboran, debaten y aprueban las leyes.",
   },
   {
     id: 1026,
@@ -323,7 +326,7 @@ export const questions: Question[] = [
     ],
     correctAnswer: 0,
     comment:
-      "La iniciativa legislativa popular exige reunir un mínimo de 500.000 firmas.",
+      "La iniciativa legislativa popular, regulada por ley orgánica, exige reunir un mínimo de 500.000 firmas acreditadas de ciudadanos para que una propuesta de ley pueda tramitarse en el Congreso.",
   },
   {
     id: 1027,
@@ -331,7 +334,8 @@ export const questions: Question[] = [
     question: "¿Cuántas comunidades autónomas hay en España?",
     options: ["8.", "17.", "25."],
     correctAnswer: 1,
-    comment: "España está organizada en 17 comunidades autónomas.",
+    comment:
+      "España está organizada territorialmente en 17 comunidades autónomas, a las que se suman las dos ciudades autónomas de Ceuta y Melilla, cada una con su propio Estatuto e instituciones de autogobierno.",
   },
   {
     id: 1028,
@@ -339,7 +343,8 @@ export const questions: Question[] = [
     question: "Los colores de la bandera española son…",
     options: ["blanco y rojo.", "rojo y amarillo.", "amarillo y blanco."],
     correctAnswer: 1,
-    comment: "La bandera española es roja y amarilla (gualda).",
+    comment:
+      "La bandera española combina franjas roja, amarilla (gualda) y roja, con el amarillo ocupando el doble de anchura; en los edificios oficiales suele incluir además el escudo nacional.",
   },
   {
     id: 1029,
@@ -347,7 +352,8 @@ export const questions: Question[] = [
     question: "¿Dónde está la sede del Gobierno de España?",
     options: ["En Madrid.", "En Barcelona.", "En Sevilla."],
     correctAnswer: 0,
-    comment: "Madrid es la sede del Gobierno y capital del Estado.",
+    comment:
+      "Madrid es la capital del Estado y sede de las principales instituciones nacionales, entre ellas el Gobierno, las Cortes Generales y la Casa Real.",
   },
   {
     id: 1030,
@@ -361,7 +367,7 @@ export const questions: Question[] = [
     ],
     correctAnswer: 0,
     comment:
-      "La bandera azul con 12 estrellas amarillas en círculo representa a la Unión Europea.",
+      "La bandera azul con doce estrellas amarillas dispuestas en círculo es el símbolo oficial de la Unión Europea; el número doce representa la perfección y la unidad, no el número de países miembros.",
   },
   {
     id: 1031,
@@ -373,7 +379,8 @@ export const questions: Question[] = [
       "diputados y senadores.",
     ],
     correctAnswer: 0,
-    comment: "En las elecciones municipales se eligen alcaldes y concejales.",
+    comment:
+      "En las elecciones municipales los ciudadanos votan a los concejales de su Ayuntamiento; a partir de ellos, en la sesión constitutiva se elige al alcalde o alcaldesa.",
   },
   {
     id: 1032,
@@ -381,7 +388,8 @@ export const questions: Question[] = [
     question: "¿Qué lengua es oficial en el País Vasco?",
     options: ["El bable.", "El aragonés.", "El euskera."],
     correctAnswer: 2,
-    comment: "El euskera es lengua cooficial en el País Vasco.",
+    comment:
+      "El euskera es lengua cooficial, junto al castellano, en el País Vasco y en parte de Navarra; es una de las pocas lenguas europeas sin parentesco conocido con las lenguas indoeuropeas.",
   },
   {
     id: 1033,
@@ -394,7 +402,7 @@ export const questions: Question[] = [
     ],
     correctAnswer: 1,
     comment:
-      "Todos los españoles tienen el deber de conocer el castellano, lengua oficial del Estado.",
+      "El artículo 3.1 de la Constitución impone a todos los españoles el deber de conocer el castellano, lengua oficial del Estado, y el derecho a usarlo en cualquier parte del territorio.",
   },
   {
     id: 1034,
@@ -403,7 +411,8 @@ export const questions: Question[] = [
       "El aranés es una lengua cooficial que se habla en un pequeño territorio de…",
     options: ["Cataluña.", "La Rioja.", "Aragón."],
     correctAnswer: 0,
-    comment: "El aranés es cooficial en el Valle de Arán, situado en Cataluña.",
+    comment:
+      "El aranés, variante del occitano, es cooficial junto al catalán y el castellano en el Valle de Arán, comarca pirenaica situada en Cataluña.",
   },
   {
     id: 1035,
@@ -417,7 +426,7 @@ export const questions: Question[] = [
     ],
     correctAnswer: 1,
     comment:
-      "Cada comunidad autónoma cuenta con una asamblea legislativa, un presidente y un consejo de gobierno.",
+      "Cada comunidad autónoma cuenta, como mínimo, con una asamblea legislativa elegida por sufragio, un consejo de gobierno con funciones ejecutivas y un presidente que dirige ambos.",
   },
   {
     id: 1036,
@@ -426,7 +435,8 @@ export const questions: Question[] = [
       "¿Cuál de estas opciones es una lengua cooficial en alguna comunidad autónoma?",
     options: ["El gallego.", "El aragonés.", "El murciano."],
     correctAnswer: 0,
-    comment: "El gallego es lengua cooficial en Galicia.",
+    comment:
+      "El gallego es lengua cooficial en Galicia junto al castellano, y comparte raíces con el portugués al proceder ambos del antiguo galaico-portugués medieval.",
   },
   {
     id: 1037,
@@ -440,7 +450,7 @@ export const questions: Question[] = [
     ],
     correctAnswer: 2,
     comment:
-      "El Instituto Cervantes promueve la enseñanza del español y difunde la cultura en español.",
+      "El Instituto Cervantes, creado en 1991, promueve la enseñanza del español y difunde la cultura hispana en el mundo a través de una amplia red de centros en decenas de países.",
   },
   {
     id: 1038,
@@ -454,7 +464,7 @@ export const questions: Question[] = [
     ],
     correctAnswer: 2,
     comment:
-      "La Real Academia Española trabaja por la normalización lingüística del español.",
+      "La Real Academia Española (RAE), fundada en 1713, vela por la unidad y correcto uso del español, elaborando el diccionario, la gramática y la ortografía de referencia para todo el mundo hispanohablante.",
   },
   {
     id: 1039,
@@ -466,7 +476,8 @@ export const questions: Question[] = [
       "En el Palacio de la Moncloa.",
     ],
     correctAnswer: 2,
-    comment: "El presidente del Gobierno reside en el Palacio de la Moncloa.",
+    comment:
+      "El presidente del Gobierno reside y despacha oficialmente en el Complejo de la Moncloa, en Madrid, que también alberga las oficinas de la Presidencia.",
   },
   {
     id: 1040,
@@ -480,7 +491,7 @@ export const questions: Question[] = [
     ],
     correctAnswer: 2,
     comment:
-      "El Ejército del Aire (y del Espacio) forma parte de las Fuerzas Armadas españolas.",
+      "El Ejército del Aire y del Espacio, junto al Ejército de Tierra y la Armada, integra las Fuerzas Armadas españolas; la Guardia Civil, en cambio, es una fuerza de seguridad de naturaleza militar pero no forma parte de ellas.",
   },
   {
     id: 1041,
@@ -488,7 +499,8 @@ export const questions: Question[] = [
     question: "¿Quiénes forman parte del Gobierno?",
     options: ["Los ministros.", "Los concejales.", "Los alcaldes."],
     correctAnswer: 0,
-    comment: "Los ministros, junto al presidente, integran el Gobierno.",
+    comment:
+      "El Gobierno está compuesto por el presidente, los vicepresidentes (cuando los hay) y los ministros, que dirigen los distintos departamentos y ejecutan las políticas del Estado.",
   },
   {
     id: 1042,
@@ -501,7 +513,7 @@ export const questions: Question[] = [
     ],
     correctAnswer: 0,
     comment:
-      "El artículo 1.1 de la Constitución define a España como Estado social y democrático de Derecho.",
+      "El artículo 1.1 de la Constitución define a España como Estado social y democrático de Derecho, lo que implica el sometimiento de los poderes públicos a la ley y el compromiso con el bienestar social.",
   },
   {
     id: 1043,
@@ -510,7 +522,8 @@ export const questions: Question[] = [
       "¿Cuál de las siguientes siglas corresponde a un partido político?",
     options: ["PP.", "PIB.", "UE."],
     correctAnswer: 0,
-    comment: "PP (Partido Popular) es la sigla de un partido político español.",
+    comment:
+      "PP corresponde al Partido Popular, una de las principales formaciones políticas españolas; PIB y UE son, en cambio, siglas económicas e institucionales (Producto Interior Bruto y Unión Europea).",
   },
   {
     id: 1044,
@@ -523,7 +536,7 @@ export const questions: Question[] = [
     ],
     correctAnswer: 0,
     comment:
-      "La heredera de la Corona ostenta el título de Princesa de Asturias.",
+      "El título de Princesa de Asturias corresponde tradicionalmente al heredero o heredera de la Corona española; lo ostenta actualmente la princesa Leonor.",
   },
   {
     id: 1045,
@@ -533,7 +546,7 @@ export const questions: Question[] = [
     options: ["Con Carlos III.", "Con Alfonso XIII.", "Con Juan Carlos I."],
     correctAnswer: 2,
     comment:
-      "Juan Carlos I encabezó la Transición y la restauración de la democracia tras el franquismo.",
+      "Juan Carlos I, proclamado rey en 1975 tras la muerte de Franco, impulsó junto a Adolfo Suárez la Transición que devolvió la democracia a España y culminó con la Constitución de 1978.",
   },
   {
     id: 1046,
@@ -541,7 +554,8 @@ export const questions: Question[] = [
     question: "¿En qué año se aprobó la Constitución española?",
     options: ["En 1957.", "En 1978.", "En 2001."],
     correctAnswer: 1,
-    comment: "La Constitución española fue aprobada en 1978.",
+    comment:
+      "La Constitución española fue aprobada en referéndum el 6 de diciembre de 1978 y sancionada por el rey ante las Cortes el 27 de diciembre de ese mismo año.",
   },
   {
     id: 1047,
@@ -549,7 +563,8 @@ export const questions: Question[] = [
     question: "¿Cuántas comunidades autónomas tienen su propia bandera?",
     options: ["Ninguna.", "Todas.", "Las que tienen una lengua cooficial."],
     correctAnswer: 1,
-    comment: "Todas las comunidades autónomas tienen su propia bandera.",
+    comment:
+      "Todas las comunidades autónomas cuentan con su propia bandera, reconocida en sus respectivos Estatutos de Autonomía como símbolo de identidad regional, independientemente de que tengan o no lengua cooficial.",
   },
   {
     id: 1048,
@@ -563,7 +578,7 @@ export const questions: Question[] = [
     ],
     correctAnswer: 2,
     comment:
-      "El Defensor del Pueblo supervisa la actuación de las administraciones y atiende las quejas ciudadanas.",
+      "El Defensor del Pueblo es un alto comisionado de las Cortes Generales que supervisa la actividad de las administraciones públicas y tramita gratuitamente las quejas de los ciudadanos que se sientan perjudicados por ellas.",
   },
   {
     id: 1049,
@@ -573,7 +588,7 @@ export const questions: Question[] = [
     options: ["250 000.", "100 000.", "500 000."],
     correctAnswer: 2,
     comment:
-      "Se necesitan al menos 500.000 firmas para presentar una iniciativa legislativa popular.",
+      "La ley orgánica reguladora de la iniciativa legislativa popular exige un mínimo de 500.000 firmas acreditadas para que el Congreso admita a trámite una proposición de ley presentada por ciudadanos.",
   },
   {
     id: 1050,
@@ -586,7 +601,8 @@ export const questions: Question[] = [
       "Unión Económica Euroasiática (UEE).",
     ],
     correctAnswer: 1,
-    comment: "España es miembro del Fondo Monetario Internacional (FMI).",
+    comment:
+      "España es miembro del Fondo Monetario Internacional (FMI) desde 1958, además de pertenecer a organizaciones como la ONU, la OTAN y la Unión Europea; las otras dos opciones agrupan a países del espacio postsoviético.",
   },
   {
     id: 1051,
@@ -596,7 +612,7 @@ export const questions: Question[] = [
     options: ["estatal.", "regional.", "local."],
     correctAnswer: 2,
     comment:
-      "La Administración se organiza en niveles central, autonómico y local.",
+      "La Administración pública española se organiza en tres niveles territoriales: la Administración General del Estado (central), las administraciones autonómicas y la Administración local (ayuntamientos y diputaciones).",
   },
   {
     id: 1052,
@@ -609,7 +625,7 @@ export const questions: Question[] = [
     ],
     correctAnswer: 2,
     comment:
-      "Diputados y senadores, integrantes de las Cortes Generales, ejercen el poder legislativo.",
+      "Diputados y senadores, que integran conjuntamente las Cortes Generales, son quienes ejercen el poder legislativo elaborando y aprobando las leyes del Estado.",
   },
   {
     id: 1053,
@@ -621,7 +637,8 @@ export const questions: Question[] = [
       "En el Palacio de la Moncloa.",
     ],
     correctAnswer: 1,
-    comment: "El rey reside en el Palacio de la Zarzuela.",
+    comment:
+      "El rey y la familia real residen y despachan en el Palacio de la Zarzuela, situado en las afueras de Madrid, mientras que el Palacio Real se usa sobre todo para actos oficiales y de Estado.",
   },
   {
     id: 1054,
@@ -629,7 +646,8 @@ export const questions: Question[] = [
     question: "El nombre oficial del parlamento español es…",
     options: ["Cortes Generales.", "Congreso de los Diputados.", "Senado."],
     correctAnswer: 0,
-    comment: "Cortes Generales es el nombre oficial del parlamento español.",
+    comment:
+      "Cortes Generales es la denominación oficial que la Constitución da al conjunto del Parlamento español, formado por el Congreso de los Diputados y el Senado.",
   },
   {
     id: 1055,
@@ -643,7 +661,7 @@ export const questions: Question[] = [
     ],
     correctAnswer: 1,
     comment:
-      "Esos organismos dependen orgánicamente de distintos ministerios del Gobierno.",
+      "Estos tres organismos son organismos públicos que dependen orgánicamente de distintos ministerios (Comercio/Industria, Igualdad e Interior, respectivamente), aunque puedan tener cierta autonomía de gestión.",
   },
   {
     id: 1056,
@@ -655,7 +673,8 @@ export const questions: Question[] = [
       "Tanto los hombres como las mujeres.",
     ],
     correctAnswer: 2,
-    comment: "La Corona no distingue por sexo para poder reinar en España.",
+    comment:
+      "La Corona española admite tanto a hombres como a mujeres, aunque la Constitución mantiene una preferencia del varón sobre la mujer en igualdad de grado dentro del orden sucesorio, una cláusula que ha sido debatida para su reforma.",
   },
   {
     id: 1057,
@@ -668,7 +687,7 @@ export const questions: Question[] = [
     ],
     correctAnswer: 1,
     comment:
-      "El Tribunal de Cuentas depende directamente de las Cortes Generales.",
+      "El Tribunal de Cuentas es el órgano fiscalizador supremo de las cuentas del Estado y del sector público, y depende directamente de las Cortes Generales para garantizar su independencia del Gobierno.",
   },
   {
     id: 1058,
@@ -682,7 +701,7 @@ export const questions: Question[] = [
     ],
     correctAnswer: 2,
     comment:
-      "El presidente del Congreso es la tercera autoridad del Estado, tras el rey y el presidente del Gobierno.",
+      "En el protocolo del Estado español, el presidente del Congreso de los Diputados ocupa el tercer puesto en el orden de precedencia, inmediatamente después del rey y del presidente del Gobierno.",
   },
   {
     id: 1059,
@@ -690,7 +709,8 @@ export const questions: Question[] = [
     question: "¿Qué lengua cooficial se habla en las Islas Baleares?",
     options: ["Gallego.", "Catalán.", "Euskera."],
     correctAnswer: 1,
-    comment: "El catalán es lengua cooficial en las Islas Baleares.",
+    comment:
+      "El catalán, en su variedad balear, es lengua cooficial junto al castellano en las Islas Baleares, reconocido así en el Estatuto de Autonomía de la comunidad.",
   },
   {
     id: 1060,
@@ -700,7 +720,7 @@ export const questions: Question[] = [
     options: ["la justicia.", "la solidaridad.", "la fraternidad."],
     correctAnswer: 0,
     comment:
-      "La justicia es también un valor superior recogido en el artículo 1.1 de la Constitución.",
+      "El artículo 1.1 recoge la libertad, la justicia, la igualdad y el pluralismo político como los valores superiores del ordenamiento jurídico español, es decir, los principios que inspiran todas las demás normas.",
   },
   {
     id: 1061,
@@ -714,7 +734,7 @@ export const questions: Question[] = [
     ],
     correctAnswer: 1,
     comment:
-      "Muchas leyes requieren un desarrollo reglamentario posterior para poder aplicarse.",
+      "Muchas leyes son de carácter general y requieren un desarrollo reglamentario posterior, aprobado por el Gobierno, que concrete los detalles necesarios para su aplicación práctica.",
   },
   {
     id: 1062,
@@ -722,7 +742,8 @@ export const questions: Question[] = [
     question: "¿Cuántos habitantes hay en España?",
     options: ["95 millones.", "49 millones.", "67 millones."],
     correctAnswer: 1,
-    comment: "España tiene aproximadamente 49 millones de habitantes.",
+    comment:
+      "España tiene una población de en torno a 49 millones de habitantes, lo que la sitúa entre los países más poblados de la Unión Europea, por detrás de Alemania, Francia e Italia.",
   },
   {
     id: 1063,
@@ -735,7 +756,7 @@ export const questions: Question[] = [
     ],
     correctAnswer: 1,
     comment:
-      "El Consejo de Estado es el órgano consultivo supremo del Gobierno.",
+      "El Consejo de Estado es el órgano consultivo supremo del Gobierno: emite dictámenes preceptivos, aunque no vinculantes, sobre asuntos jurídicos y administrativos relevantes.",
   },
   {
     id: 1064,
@@ -743,7 +764,8 @@ export const questions: Question[] = [
     question: "¿Quién dirige la política interior y exterior de España?",
     options: ["El rey.", "El Gobierno.", "El Congreso de los Diputados."],
     correctAnswer: 1,
-    comment: "El Gobierno dirige la política interior y exterior del país.",
+    comment:
+      "El artículo 97 de la Constitución encomienda al Gobierno la dirección de la política interior y exterior, de la Administración civil y militar, y de la defensa del Estado.",
   },
   {
     id: 1065,
@@ -755,7 +777,8 @@ export const questions: Question[] = [
       "las Cortes Generales.",
     ],
     correctAnswer: 2,
-    comment: "El Defensor del Pueblo depende de las Cortes Generales.",
+    comment:
+      "El Defensor del Pueblo es designado por las Cortes Generales y les rinde cuentas anualmente mediante un informe, lo que refuerza su independencia respecto del Gobierno al que supervisa.",
   },
   {
     id: 1066,
@@ -768,7 +791,7 @@ export const questions: Question[] = [
     ],
     correctAnswer: 0,
     comment:
-      "El Instituto Etxepare promueve el euskera y la cultura vasca en el exterior.",
+      "El Instituto Etxepare, dependiente del Gobierno vasco, promueve el euskera y la cultura vasca fuera del País Vasco, de forma similar a como el Instituto Cervantes hace con el español.",
   },
   {
     id: 1067,
@@ -778,7 +801,7 @@ export const questions: Question[] = [
     options: ["Cádiz.", "Málaga.", "Albacete."],
     correctAnswer: 1,
     comment:
-      "Málaga se encuentra entre las diez ciudades más pobladas de España.",
+      "Málaga, en la Costa del Sol andaluza, es una de las diez ciudades más pobladas de España y un importante polo turístico y tecnológico.",
   },
   {
     id: 1068,
@@ -792,7 +815,7 @@ export const questions: Question[] = [
     ],
     correctAnswer: 1,
     comment:
-      "Cualquier ciudadano puede realizar trámites en línea con la Administración Pública.",
+      "Cualquier ciudadano, español o extranjero residente, puede realizar trámites en línea con la Administración siempre que disponga de un medio de identificación electrónica válido.",
   },
   {
     id: 1069,
@@ -800,7 +823,8 @@ export const questions: Question[] = [
     question: "¿Cómo se llama el rey de España?",
     options: ["Juan Carlos I.", "Felipe VI.", "Alfonso XIII."],
     correctAnswer: 1,
-    comment: "Felipe VI es el actual rey de España.",
+    comment:
+      "Felipe VI es el actual rey de España, proclamado en junio de 2014 tras la abdicación de su padre, Juan Carlos I.",
   },
   {
     id: 1070,
@@ -814,7 +838,7 @@ export const questions: Question[] = [
     ],
     correctAnswer: 1,
     comment:
-      "El Consejo General del Poder Judicial es el órgano de gobierno de jueces y magistrados.",
+      "El Consejo General del Poder Judicial (CGPJ) es el órgano de gobierno de jueces y magistrados: vela por su independencia y gestiona nombramientos, ascensos e inspecciones dentro de la carrera judicial.",
   },
   {
     id: 1071,
@@ -827,7 +851,7 @@ export const questions: Question[] = [
     ],
     correctAnswer: 0,
     comment:
-      "Las Cortes Generales aprueban los Presupuestos Generales del Estado.",
+      "Aunque es el Gobierno quien elabora el proyecto de Presupuestos Generales del Estado, corresponde a las Cortes Generales examinarlo, enmendarlo y aprobarlo definitivamente cada año.",
   },
   {
     id: 1072,
@@ -840,7 +864,7 @@ export const questions: Question[] = [
     ],
     correctAnswer: 0,
     comment:
-      "La Constitución es la ley fundamental y suprema del ordenamiento español.",
+      "La Constitución es la ley fundamental y suprema del ordenamiento español, por encima de cualquier otra norma; ninguna ley, decreto o reglamento puede contradecirla.",
   },
   {
     id: 1073,
@@ -853,7 +877,7 @@ export const questions: Question[] = [
     ],
     correctAnswer: 0,
     comment:
-      "Las Cortes Generales están formadas por el Congreso de los Diputados y el Senado.",
+      "Las Cortes Generales forman un sistema bicameral integrado por el Congreso de los Diputados, cámara baja, y el Senado, cámara alta y de representación territorial.",
   },
   {
     id: 1074,
@@ -865,7 +889,8 @@ export const questions: Question[] = [
       "El poder judicial.",
     ],
     correctAnswer: 1,
-    comment: "El poder legislativo (Cortes Generales) elabora las leyes.",
+    comment:
+      "El poder legislativo, encarnado en las Cortes Generales, es el encargado de debatir, enmendar y aprobar las leyes, aunque el Gobierno también puede presentar proyectos de ley.",
   },
   {
     id: 1075,
@@ -879,7 +904,7 @@ export const questions: Question[] = [
     ],
     correctAnswer: 1,
     comment:
-      "Las Fuerzas Armadas garantizan la soberanía e integridad territorial de España.",
+      "El artículo 8 de la Constitución encomienda a las Fuerzas Armadas (Ejército de Tierra, Armada y Ejército del Aire y del Espacio) garantizar la soberanía e independencia de España y defender su integridad territorial.",
   },
   {
     id: 1076,
@@ -892,7 +917,8 @@ export const questions: Question[] = [
       "Organización de las Naciones Unidas (ONU).",
     ],
     correctAnswer: 2,
-    comment: "España participa en misiones de paz de la ONU desde 1989.",
+    comment:
+      "Desde 1989, con el despliegue de observadores en Centroamérica, las Fuerzas Armadas españolas participan de forma continuada en misiones de paz y ayuda humanitaria bajo mandato de la ONU.",
   },
   {
     id: 1077,
@@ -901,7 +927,7 @@ export const questions: Question[] = [
     options: ["La Guardia Civil.", "La Policía local.", "La Policía Nacional."],
     correctAnswer: 0,
     comment:
-      "La Guardia Civil vigila puertos, aeropuertos, fronteras y costas.",
+      "La Guardia Civil, cuerpo de naturaleza militar dependiente de los Ministerios de Interior y Defensa, tiene entre sus funciones la vigilancia de fronteras, costas, puertos y aeropuertos.",
   },
   {
     id: 1078,
@@ -911,7 +937,7 @@ export const questions: Question[] = [
     options: ["La Guardia Civil.", "La Policía local.", "La Policía Nacional."],
     correctAnswer: 0,
     comment:
-      "La Guardia Civil controla los pasaportes en los pasos fronterizos.",
+      "El control de pasaportes y de la documentación en los pasos fronterizos terrestres, marítimos y aéreos corresponde al Servicio de Control de Fronteras de la Guardia Civil.",
   },
   {
     id: 1079,
@@ -921,7 +947,7 @@ export const questions: Question[] = [
     options: ["Manuel Fraga.", "José María Aznar.", "Yolanda Díaz."],
     correctAnswer: 1,
     comment:
-      "José María Aznar fue presidente del Gobierno de España entre 1996 y 2004.",
+      "José María Aznar, líder del Partido Popular, fue presidente del Gobierno de España entre 1996 y 2004, tras dos legislaturas consecutivas.",
   },
   {
     id: 1080,
@@ -929,7 +955,8 @@ export const questions: Question[] = [
     question: "¿Cómo se llama la policía autonómica de Cataluña?",
     options: ["Guardia Civil.", "Ertzaintza.", "Mossos d'Esquadra."],
     correctAnswer: 2,
-    comment: "Los Mossos d'Esquadra son la policía autonómica de Cataluña.",
+    comment:
+      "Los Mossos d'Esquadra son la policía autonómica de Cataluña, con competencias plenas en seguridad ciudadana en gran parte del territorio catalán.",
   },
   {
     id: 1081,
@@ -937,7 +964,8 @@ export const questions: Question[] = [
     question: "¿Cómo se llama la policía autonómica del País Vasco?",
     options: ["Ertzaintza.", "Guardia Civil.", "Mossos d'Esquadra."],
     correctAnswer: 0,
-    comment: "La Ertzaintza es la policía autonómica del País Vasco.",
+    comment:
+      "La Ertzaintza es la policía autonómica del País Vasco, creada tras el Estatuto de Gernika y con amplias competencias de seguridad en la comunidad.",
   },
   {
     id: 1082,
@@ -945,7 +973,8 @@ export const questions: Question[] = [
     question: "¿Desde qué año es rey Felipe VI?",
     options: ["Desde 1975.", "Desde 2014.", "Desde 2020."],
     correctAnswer: 1,
-    comment: "Felipe VI es rey desde junio de 2014.",
+    comment:
+      "Felipe VI es rey desde el 19 de junio de 2014, fecha en que fue proclamado ante las Cortes Generales tras la abdicación de su padre, Juan Carlos I.",
   },
   {
     id: 1083,
@@ -953,7 +982,8 @@ export const questions: Question[] = [
     question: "¿Quién regula el tráfico en los pueblos y ciudades?",
     options: ["La Guardia Civil.", "Protección Civil.", "La Policía Local."],
     correctAnswer: 2,
-    comment: "La Policía Local regula el tráfico dentro de los municipios.",
+    comment:
+      "La Policía Local, dependiente de cada Ayuntamiento, se encarga de regular y ordenar el tráfico dentro del casco urbano, mientras que la Guardia Civil hace lo propio en carreteras interurbanas.",
   },
   {
     id: 1084,
@@ -966,7 +996,7 @@ export const questions: Question[] = [
     ],
     correctAnswer: 2,
     comment:
-      "Cualquier persona, española o extranjera, puede presentar una queja ante el Defensor del Pueblo.",
+      "Cualquier persona, sea española o extranjera, con o sin residencia legal e independientemente de su edad, puede presentar una queja gratuita ante el Defensor del Pueblo sin necesidad de abogado.",
   },
   {
     id: 1085,
@@ -975,7 +1005,7 @@ export const questions: Question[] = [
     options: ["un derecho.", "un deber.", "una obligación."],
     correctAnswer: 0,
     comment:
-      "El voto es un derecho, no una obligación, en las elecciones españolas.",
+      "A diferencia de países como Bélgica o Australia, en España el voto es un derecho de ejercicio libre y no una obligación legal; nadie puede ser sancionado por no votar.",
   },
   {
     id: 1086,
@@ -987,7 +1017,8 @@ export const questions: Question[] = [
       "El Ejército de Tierra.",
     ],
     correctAnswer: 0,
-    comment: "La Guardia Civil vigila el tráfico en las carreteras.",
+    comment:
+      "La Agrupación de Tráfico de la Guardia Civil es la encargada de vigilar la seguridad vial en las carreteras interurbanas de todo el país.",
   },
   {
     id: 1087,
@@ -999,7 +1030,8 @@ export const questions: Question[] = [
       "El Consejo Económico y Social.",
     ],
     correctAnswer: 1,
-    comment: "La Agencia Tributaria recauda los impuestos estatales.",
+    comment:
+      "La Agencia Estatal de Administración Tributaria (Agencia Tributaria) es el organismo responsable de gestionar el sistema fiscal estatal y recaudar los principales impuestos, como el IRPF o el IVA.",
   },
   {
     id: 1088,
@@ -1011,7 +1043,8 @@ export const questions: Question[] = [
       "En el Boletín Oficial del Estado (BOE).",
     ],
     correctAnswer: 2,
-    comment: "Las leyes se publican en el Boletín Oficial del Estado (BOE).",
+    comment:
+      "El Boletín Oficial del Estado (BOE) es el diario oficial donde se publican las leyes y disposiciones estatales; una norma no entra en vigor hasta que se publica en él.",
   },
   {
     id: 1089,
@@ -1020,7 +1053,8 @@ export const questions: Question[] = [
       "¿Cómo se llaman los órganos de gobierno que solo existen en Canarias?",
     options: ["Cabildos.", "Consejos insulares.", "Diputaciones."],
     correctAnswer: 0,
-    comment: "En Canarias los órganos de gobierno insular se llaman cabildos.",
+    comment:
+      "En Canarias, cada isla cuenta con un cabildo insular, órgano de gobierno propio equivalente en cierto modo a una diputación provincial pero con competencias reforzadas por su carácter insular.",
   },
   {
     id: 1090,
@@ -1034,7 +1068,7 @@ export const questions: Question[] = [
     ],
     correctAnswer: 2,
     comment:
-      "El pago de impuestos puede realizarse a través de la sede electrónica.",
+      "El pago de impuestos y otras obligaciones tributarias puede realizarse a través de la sede electrónica de la Agencia Tributaria, sin necesidad de acudir presencialmente a una oficina.",
   },
   {
     id: 1091,
@@ -1044,7 +1078,7 @@ export const questions: Question[] = [
     options: ["010.", "060.", "091."],
     correctAnswer: 1,
     comment:
-      "El 060 es el teléfono de información de la Administración General del Estado.",
+      "El 060 es el teléfono único de información y atención al ciudadano de la Administración General del Estado, mientras que el 091 corresponde a la Policía Nacional y el 010 a la información municipal.",
   },
   {
     id: 1092,
@@ -1052,7 +1086,8 @@ export const questions: Question[] = [
     question: "España está organizada en…",
     options: ["cantones.", "comunidades autónomas.", "estados federales."],
     correctAnswer: 1,
-    comment: "España se organiza territorialmente en comunidades autónomas.",
+    comment:
+      "España se organiza territorialmente en comunidades autónomas, un modelo de descentralización política intermedio entre el Estado unitario clásico y el federalismo, conocido como Estado de las Autonomías.",
   },
   {
     id: 1093,
@@ -1061,7 +1096,7 @@ export const questions: Question[] = [
     options: ["Ninguno.", "Uno.", "Muchos."],
     correctAnswer: 2,
     comment:
-      "España cuenta con un sistema multipartidista, con numerosos partidos políticos.",
+      "España cuenta con un sistema multipartidista, garantizado por el pluralismo político reconocido en la Constitución, con numerosos partidos de ámbito nacional, regional y local.",
   },
   {
     id: 1094,
@@ -1074,7 +1109,7 @@ export const questions: Question[] = [
     ],
     correctAnswer: 1,
     comment:
-      "La investidura del presidente del Gobierno tiene lugar en el Congreso de los Diputados.",
+      "La sesión de investidura, en la que el candidato debe obtener la confianza de la cámara mediante votación, se celebra en el Congreso de los Diputados, no en el Senado ni en la Moncloa.",
   },
   {
     id: 1095,
@@ -1086,7 +1121,8 @@ export const questions: Question[] = [
       "El ministro de Defensa.",
     ],
     correctAnswer: 0,
-    comment: "El rey ostenta el mando supremo de las Fuerzas Armadas.",
+    comment:
+      "El artículo 62.h) de la Constitución atribuye al rey el mando supremo de las Fuerzas Armadas, aunque en la práctica la dirección efectiva de la defensa corresponde al Gobierno.",
   },
   {
     id: 1096,
@@ -1100,7 +1136,7 @@ export const questions: Question[] = [
     ],
     correctAnswer: 1,
     comment:
-      "El delegado del Gobierno representa al Estado en cada comunidad autónoma.",
+      "El delegado del Gobierno representa a la Administración General del Estado en cada comunidad autónoma y coordina, entre otras cosas, la actuación de las Fuerzas y Cuerpos de Seguridad del Estado.",
   },
   {
     id: 1097,
@@ -1108,7 +1144,8 @@ export const questions: Question[] = [
     question: "¿Cuántas provincias hay en España?",
     options: ["45.", "50.", "55."],
     correctAnswer: 1,
-    comment: "España está dividida en 50 provincias.",
+    comment:
+      "España está dividida en 50 provincias, una división administrativa heredada en gran parte de la reforma territorial de 1833, a las que se suman Ceuta y Melilla como ciudades autónomas.",
   },
   {
     id: 1098,
@@ -1117,7 +1154,7 @@ export const questions: Question[] = [
     options: ["del Estado.", "de la comunidad autónoma.", "de la provincia."],
     correctAnswer: 1,
     comment:
-      "La enseñanza de las lenguas cooficiales corresponde a las comunidades autónomas.",
+      "La enseñanza y promoción de las lenguas cooficiales corresponde a las comunidades autónomas que las reconocen en su Estatuto, como parte de sus competencias educativas y culturales.",
   },
   {
     id: 1099,
@@ -1129,7 +1166,8 @@ export const questions: Question[] = [
       "a los jueces y magistrados.",
     ],
     correctAnswer: 0,
-    comment: "El Gobierno del Estado ejerce el poder ejecutivo.",
+    comment:
+      "El Gobierno del Estado, formado por el presidente y los ministros, ejerce el poder ejecutivo: dirige la Administración, aplica las leyes y gestiona la política interior y exterior.",
   },
   {
     id: 1100,
@@ -1137,7 +1175,8 @@ export const questions: Question[] = [
     question: "¿Cuántas cámaras hay en el Parlamento español?",
     options: ["Una.", "Dos.", "Tres."],
     correctAnswer: 1,
-    comment: "El Parlamento español es bicameral: Congreso y Senado.",
+    comment:
+      "El Parlamento español es bicameral: está formado por el Congreso de los Diputados y el Senado, cada uno con funciones y composición diferentes.",
   },
   {
     id: 1101,
@@ -1151,7 +1190,7 @@ export const questions: Question[] = [
     ],
     correctAnswer: 0,
     comment:
-      "Servicios como el agua y el alumbrado urbano son competencia municipal.",
+      "Servicios básicos de proximidad como el suministro de agua, el alumbrado público o la recogida de basuras son competencia obligatoria de los ayuntamientos, dentro de la Administración local.",
   },
   {
     id: 1102,
@@ -1161,7 +1200,7 @@ export const questions: Question[] = [
     options: ["el Estado.", "las comunidades autónomas.", "los ayuntamientos."],
     correctAnswer: 0,
     comment:
-      "Nacionalidad, inmigración y extranjería son competencia exclusiva del Estado.",
+      "El artículo 149.1.2ª de la Constitución reserva al Estado, en exclusiva, la competencia sobre nacionalidad, inmigración, emigración, extranjería y derecho de asilo.",
   },
   {
     id: 1103,
@@ -1170,7 +1209,7 @@ export const questions: Question[] = [
     options: ["Ninguna.", "Una.", "Dos."],
     correctAnswer: 0,
     comment:
-      "Ninguna mujer ha sido presidenta del Gobierno en España hasta la fecha.",
+      "Hasta la fecha ninguna mujer ha ocupado la presidencia del Gobierno de España, aunque sí han desempeñado otros cargos de alta responsabilidad, como vicepresidencias o ministerios.",
   },
   {
     id: 1104,
@@ -1179,7 +1218,7 @@ export const questions: Question[] = [
     options: ["el Estado.", "las comunidades autónomas.", "los ayuntamientos."],
     correctAnswer: 0,
     comment:
-      "Las relaciones internacionales son competencia exclusiva del Estado.",
+      "El artículo 149.1.3ª de la Constitución atribuye al Estado, con carácter exclusivo, la competencia sobre relaciones internacionales, entre ellas la política exterior y los tratados con otros países.",
   },
   {
     id: 1105,
@@ -1187,7 +1226,8 @@ export const questions: Question[] = [
     question: "El Ayuntamiento está formado por el alcalde y…",
     options: ["los concejales.", "los diputados.", "los senadores."],
     correctAnswer: 0,
-    comment: "El Ayuntamiento lo forman el alcalde y los concejales.",
+    comment:
+      "El Ayuntamiento, órgano de gobierno municipal, lo integran el alcalde o alcaldesa y los concejales elegidos en las elecciones municipales, reunidos en el Pleno.",
   },
   {
     id: 1106,
@@ -1200,7 +1240,7 @@ export const questions: Question[] = [
     ],
     correctAnswer: 2,
     comment:
-      "El presidente y los consejeros forman el gobierno de una comunidad autónoma.",
+      "El gobierno de cada comunidad autónoma está formado por el presidente y los consejeros, equivalentes autonómicos de los ministros, que dirigen las distintas consejerías.",
   },
   {
     id: 1107,
@@ -1208,7 +1248,8 @@ export const questions: Question[] = [
     question: "¿Cuál es el órgano de gobierno en los municipios?",
     options: ["El ayuntamiento.", "La diputación.", "El cabildo."],
     correctAnswer: 0,
-    comment: "El ayuntamiento es el órgano de gobierno de los municipios.",
+    comment:
+      "El ayuntamiento es el órgano de gobierno y administración de cada municipio, presidido por el alcalde y compuesto por el conjunto de concejales.",
   },
   {
     id: 1108,
@@ -1217,7 +1258,8 @@ export const questions: Question[] = [
       "¿Cómo se llaman los órganos de gobierno de las provincias españolas?",
     options: ["Cabildos.", "Consejos insulares.", "Diputaciones."],
     correctAnswer: 2,
-    comment: "Las diputaciones son los órganos de gobierno de las provincias.",
+    comment:
+      "Las diputaciones provinciales son los órganos de gobierno de las provincias, encargadas de coordinar servicios entre los municipios que las integran, salvo en los territorios donde existen cabildos o consejos insulares.",
   },
   {
     id: 1109,
@@ -1225,7 +1267,8 @@ export const questions: Question[] = [
     question: "¿Cuál es el órgano superior del poder ejecutivo?",
     options: ["El Gobierno.", "Las Fuerzas Armadas.", "Las Cortes Generales."],
     correctAnswer: 0,
-    comment: "El Gobierno es el órgano superior del poder ejecutivo.",
+    comment:
+      "El Gobierno, presidido por el presidente y formado por los ministros, es el órgano superior del poder ejecutivo, responsable de dirigir la política nacional e internacional del Estado.",
   },
   {
     id: 1110,
@@ -1233,7 +1276,8 @@ export const questions: Question[] = [
     question: "El idioma español también se llama…",
     options: ["aragonés.", "castellano.", "leonés."],
     correctAnswer: 1,
-    comment: "Castellano es otro nombre del idioma español.",
+    comment:
+      "Castellano y español son dos nombres equivalentes para el mismo idioma; el término «castellano» recuerda su origen histórico en el antiguo Reino de Castilla.",
   },
   {
     id: 1111,
@@ -1245,7 +1289,8 @@ export const questions: Question[] = [
       "A los eurodiputados.",
     ],
     correctAnswer: 2,
-    comment: "En las elecciones al Parlamento Europeo se eligen eurodiputados.",
+    comment:
+      "En las elecciones al Parlamento Europeo, que se celebran cada cinco años en todos los países de la Unión, los ciudadanos eligen a los eurodiputados que les representarán en Estrasburgo y Bruselas.",
   },
   {
     id: 1112,
@@ -1253,7 +1298,8 @@ export const questions: Question[] = [
     question: "Los españoles pueden votar a partir de los…",
     options: ["16 años.", "18 años.", "21 años."],
     correctAnswer: 1,
-    comment: "El derecho al voto se adquiere a los 18 años en España.",
+    comment:
+      "El derecho al voto en España se adquiere al cumplir los 18 años, edad que coincide además con la mayoría de edad civil y penal.",
   },
   {
     id: 1113,
@@ -1262,7 +1308,7 @@ export const questions: Question[] = [
     options: ["municipales.", "autonómicas.", "generales."],
     correctAnswer: 0,
     comment:
-      "Ciertos extranjeros pueden votar en elecciones municipales, según acuerdos de reciprocidad.",
+      "Determinados extranjeros residentes, en función de acuerdos de reciprocidad con su país de origen (o por ser ciudadanos de la UE), pueden votar y ser elegidos en las elecciones municipales.",
   },
   {
     id: 1114,
@@ -1275,7 +1321,7 @@ export const questions: Question[] = [
     ],
     correctAnswer: 2,
     comment:
-      "El Tribunal de Cuentas fiscaliza las cuentas y la gestión económica del Estado.",
+      "El Tribunal de Cuentas fiscaliza la gestión económico-financiera del Estado y del sector público, comprobando que el gasto se ajusta a los principios de legalidad, eficiencia y economía.",
   },
   {
     id: 1115,
@@ -1287,7 +1333,8 @@ export const questions: Question[] = [
       "A los concejales.",
     ],
     correctAnswer: 0,
-    comment: "En las elecciones generales se eligen diputados y senadores.",
+    comment:
+      "En las elecciones generales, que se celebran normalmente cada cuatro años, los ciudadanos eligen a los diputados del Congreso y a los senadores que formarán las Cortes Generales.",
   },
   {
     id: 1116,
@@ -1295,7 +1342,8 @@ export const questions: Question[] = [
     question: "¿Cuántos miembros tiene el Congreso de los Diputados?",
     options: ["300.", "350.", "400."],
     correctAnswer: 1,
-    comment: "El Congreso de los Diputados tiene 350 escaños.",
+    comment:
+      "El Congreso de los Diputados tiene 350 escaños, repartidos entre las circunscripciones provinciales según su población, tal como establece la Ley Orgánica del Régimen Electoral General.",
   },
   {
     id: 1117,
@@ -1303,7 +1351,8 @@ export const questions: Question[] = [
     question: "Los municipios y provincias forman parte de la Administración…",
     options: ["autonómica.", "local.", "central."],
     correctAnswer: 1,
-    comment: "Municipios y provincias forman parte de la Administración local.",
+    comment:
+      "Municipios y provincias constituyen la Administración local, el nivel de gobierno más cercano al ciudadano, junto con las islas en los territorios que cuentan con cabildos o consejos insulares.",
   },
   {
     id: 1118,
@@ -1311,7 +1360,8 @@ export const questions: Question[] = [
     question: "La comunidad autónoma más poblada de España es…",
     options: ["Andalucía.", "Cataluña.", "Castilla y León."],
     correctAnswer: 0,
-    comment: "Andalucía es la comunidad autónoma más poblada de España.",
+    comment:
+      "Andalucía, con más de ocho millones de habitantes, es la comunidad autónoma más poblada de España, seguida de cerca por Cataluña y Madrid.",
   },
   {
     id: 1119,
@@ -1321,7 +1371,7 @@ export const questions: Question[] = [
     options: ["Asociación.", "Partido.", "Sindicato."],
     correctAnswer: 2,
     comment:
-      "El sindicato defiende los intereses laborales de los trabajadores.",
+      "El sindicato es la organización que defiende los intereses laborales de los trabajadores, negociando convenios colectivos y representándolos frente a empresarios y Administración.",
   },
   {
     id: 1120,
@@ -1334,7 +1384,7 @@ export const questions: Question[] = [
     ],
     correctAnswer: 0,
     comment:
-      "El Congreso de los Diputados elige (inviste) al presidente del Gobierno.",
+      "Tras las elecciones generales, es el Congreso de los Diputados quien inviste al presidente del Gobierno mediante votación; el rey se limita a proponer al candidato tras consultar con los grupos parlamentarios.",
   },
 
   // =============================================
@@ -1348,7 +1398,7 @@ export const questions: Question[] = [
     options: ["Verdadero.", "Falso."],
     correctAnswer: 1,
     comment:
-      "Falso: la Constitución garantiza la libertad religiosa; no obliga a practicar ninguna religión.",
+      "Falso: el artículo 16 de la Constitución garantiza la libertad religiosa e ideológica de individuos y comunidades, sin más límite que el orden público; nadie está obligado a practicar ninguna religión ni a declarar sus creencias.",
   },
   {
     id: 2002,
@@ -1358,7 +1408,7 @@ export const questions: Question[] = [
     options: ["Verdadero.", "Falso."],
     correctAnswer: 1,
     comment:
-      "Falso: no existe ese plazo de espera de tres años para votar tras obtener la nacionalidad por residencia.",
+      "Falso: en el momento en que una persona adquiere la nacionalidad española, sea por residencia o por cualquier otra vía, obtiene de inmediato los mismos derechos políticos, incluido el derecho al voto.",
   },
   {
     id: 2003,
@@ -1368,7 +1418,7 @@ export const questions: Question[] = [
     options: ["Verdadero.", "Falso."],
     correctAnswer: 0,
     comment:
-      "Verdadero: el artículo 15 de la Constitución prohíbe la tortura y la pena de muerte.",
+      "Verdadero: el artículo 15 de la Constitución reconoce el derecho a la vida y a la integridad física y moral, y prohíbe expresamente la tortura, los tratos inhumanos o degradantes y la pena de muerte (salvo lo previsto por las leyes penales militares en tiempo de guerra, ya derogado en la práctica).",
   },
   {
     id: 2004,
@@ -1378,7 +1428,7 @@ export const questions: Question[] = [
     options: ["Verdadero.", "Falso."],
     correctAnswer: 0,
     comment:
-      "Verdadero: el artículo 6 exige que la estructura y el funcionamiento de los partidos sean democráticos.",
+      "Verdadero: el artículo 6 de la Constitución exige que la estructura interna y el funcionamiento de los partidos políticos sean democráticos, como garantía del pluralismo político.",
   },
   {
     id: 2005,
@@ -1388,7 +1438,7 @@ export const questions: Question[] = [
     options: ["Verdadero.", "Falso."],
     correctAnswer: 1,
     comment:
-      "Falso: nadie puede ser obligado a declarar sus ideas religiosas, políticas o de otro tipo (art. 16.2).",
+      "Falso: el artículo 16.2 establece que nadie podrá ser obligado a declarar sobre su ideología, religión o creencias, como consecuencia directa de la libertad ideológica reconocida en el mismo artículo.",
   },
   {
     id: 2006,
@@ -1398,7 +1448,7 @@ export const questions: Question[] = [
     options: ["Verdadero.", "Falso."],
     correctAnswer: 1,
     comment:
-      "Falso: la libertad de entrada y salida de España no puede limitarse por motivos ideológicos.",
+      "Falso: el artículo 19 de la Constitución reconoce la libertad de entrada y salida de España, y este derecho no puede ser limitado por motivos políticos o ideológicos.",
   },
   {
     id: 2007,
@@ -1408,7 +1458,7 @@ export const questions: Question[] = [
     options: ["Verdadero.", "Falso."],
     correctAnswer: 0,
     comment:
-      "Verdadero: la Educación Primaria es obligatoria y gratuita en España.",
+      "Verdadero: la Educación Primaria forma parte, junto a la ESO, de la enseñanza básica que la Constitución declara obligatoria y gratuita para todos los residentes en España entre los 6 y los 16 años.",
   },
   {
     id: 2008,
@@ -1418,7 +1468,7 @@ export const questions: Question[] = [
     options: ["Verdadero.", "Falso."],
     correctAnswer: 0,
     comment:
-      "Verdadero: el artículo 47 de la Constitución reconoce el derecho a una vivienda digna.",
+      "Verdadero: el artículo 47 reconoce el derecho a disfrutar de una vivienda digna y adecuada, aunque, al ser un principio rector de la política social y económica, no es exigible directamente ante los tribunales como un derecho fundamental.",
   },
   {
     id: 2009,
@@ -1428,7 +1478,7 @@ export const questions: Question[] = [
     options: ["Verdadero.", "Falso."],
     correctAnswer: 1,
     comment:
-      "Falso: para entrar en un domicilio se necesita, en general, resolución judicial o consentimiento.",
+      "Falso: el domicilio es inviolable (art. 18.2 CE); para entrar sin consentimiento del titular hace falta, salvo flagrante delito, una resolución judicial que lo autorice.",
   },
   {
     id: 2010,
@@ -1438,7 +1488,7 @@ export const questions: Question[] = [
     options: ["Verdadero.", "Falso."],
     correctAnswer: 0,
     comment:
-      "Verdadero: el secreto de las comunicaciones solo puede romperse con resolución judicial.",
+      "Verdadero: el artículo 18.3 de la Constitución garantiza el secreto de las comunicaciones, especialmente las postales, telegráficas y telefónicas, y solo permite intervenirlas mediante resolución judicial motivada.",
   },
   {
     id: 2011,
@@ -1448,7 +1498,7 @@ export const questions: Question[] = [
     options: ["Verdadero.", "Falso."],
     correctAnswer: 0,
     comment:
-      "Verdadero: el artículo 22 de la Constitución reconoce el derecho de asociación.",
+      "Verdadero: el artículo 22 de la Constitución reconoce el derecho de asociación, que permite crear libremente entidades sin ánimo de lucro para fines lícitos, sin necesidad de autorización previa.",
   },
   {
     id: 2012,
@@ -1458,7 +1508,7 @@ export const questions: Question[] = [
     options: ["Verdadero.", "Falso."],
     correctAnswer: 0,
     comment:
-      "Verdadero: la libertad de cátedra está reconocida dentro de los límites constitucionales.",
+      "Verdadero: la libertad de cátedra, recogida en el artículo 20.1.c) de la Constitución, permite a los docentes transmitir sus conocimientos y opiniones científicas dentro del respeto a los principios constitucionales.",
   },
   {
     id: 2013,
@@ -1468,7 +1518,7 @@ export const questions: Question[] = [
     options: ["Verdadero.", "Falso."],
     correctAnswer: 1,
     comment:
-      "Falso: muchos derechos fundamentales se reconocen a toda persona, no solo a los españoles.",
+      "Falso: muchos derechos del Título I, como la vida, la libertad o la tutela judicial efectiva, se reconocen a toda persona con independencia de su nacionalidad; solo algunos derechos (como el sufragio) se reservan a los españoles.",
   },
   {
     id: 2014,
@@ -1477,7 +1527,7 @@ export const questions: Question[] = [
     options: ["Verdadero.", "Falso."],
     correctAnswer: 0,
     comment:
-      "Verdadero: colaborar con la Administración de Justicia es un deber ciudadano.",
+      "Verdadero: colaborar con la Administración de Justicia, por ejemplo declarando como testigo cuando se es requerido, es un deber cívico recogido en el ordenamiento español.",
   },
   {
     id: 2015,
@@ -1487,7 +1537,7 @@ export const questions: Question[] = [
     options: ["Verdadero.", "Falso."],
     correctAnswer: 0,
     comment:
-      "Verdadero: la protección de datos personales limita el acceso de terceros a esa información.",
+      "Verdadero: la legislación de protección de datos personales (en línea con el Reglamento europeo de protección de datos) limita quién puede acceder, tratar o ceder los datos de carácter personal de otras personas.",
   },
   {
     id: 2016,
@@ -1497,7 +1547,7 @@ export const questions: Question[] = [
     options: ["Verdadero.", "Falso."],
     correctAnswer: 0,
     comment:
-      "Verdadero: la libertad de expresión y de prensa tiene como límite el derecho al honor.",
+      "Verdadero: aunque el artículo 20 reconoce la libertad de expresión e información, ese derecho encuentra su límite en el respeto al derecho al honor, a la intimidad y a la propia imagen de las personas (art. 18 CE).",
   },
   {
     id: 2017,
@@ -1507,7 +1557,7 @@ export const questions: Question[] = [
     options: ["Verdadero.", "Falso."],
     correctAnswer: 0,
     comment:
-      "Verdadero: las causas de separación y divorcio están reguladas por ley.",
+      "Verdadero: el Código Civil regula las causas y el procedimiento de separación y divorcio; desde 2005 el divorcio en España no exige separación previa ni alegar una causa concreta.",
   },
   {
     id: 2018,
@@ -1517,7 +1567,7 @@ export const questions: Question[] = [
     options: ["Verdadero.", "Falso."],
     correctAnswer: 1,
     comment:
-      "Falso: la sanidad pública en España es universal, no solo para mayores de 65 años.",
+      "Falso: el sistema público de salud en España es de cobertura prácticamente universal para toda la población residente, no está limitado a las personas mayores de 65 años.",
   },
   {
     id: 2019,
@@ -1526,7 +1576,7 @@ export const questions: Question[] = [
     options: ["Verdadero.", "Falso."],
     correctAnswer: 0,
     comment:
-      "Verdadero: el artículo 14 consagra la igualdad ante la ley entre hombres y mujeres.",
+      "Verdadero: el artículo 14 de la Constitución consagra la igualdad ante la ley y prohíbe cualquier discriminación por razón de sexo, entre otras circunstancias personales o sociales.",
   },
   {
     id: 2020,
@@ -1536,7 +1586,7 @@ export const questions: Question[] = [
     options: ["Verdadero.", "Falso."],
     correctAnswer: 0,
     comment:
-      "Verdadero: la enseñanza obligatoria comprende Educación Primaria y ESO.",
+      "Verdadero: la enseñanza básica obligatoria en España comprende la Educación Primaria (6 a 12 años) y la Educación Secundaria Obligatoria o ESO (12 a 16 años).",
   },
   {
     id: 2021,
@@ -1544,7 +1594,8 @@ export const questions: Question[] = [
     question: "En España hay una religión oficial.",
     options: ["Verdadero.", "Falso."],
     correctAnswer: 1,
-    comment: "Falso: España es un Estado aconfesional, sin religión oficial.",
+    comment:
+      "Falso: el artículo 16.3 establece que ninguna confesión tendrá carácter estatal; España es un Estado aconfesional, aunque coopera con las distintas confesiones religiosas presentes en la sociedad.",
   },
   {
     id: 2022,
@@ -1553,7 +1604,7 @@ export const questions: Question[] = [
     options: ["Verdadero.", "Falso."],
     correctAnswer: 0,
     comment:
-      "Verdadero: la atención sanitaria pública es gratuita en el punto de uso.",
+      "Verdadero: la atención sanitaria a través del Sistema Nacional de Salud es gratuita en el punto de uso para la persona usuaria, financiada mediante impuestos y cotizaciones.",
   },
   {
     id: 2023,
@@ -1562,7 +1613,7 @@ export const questions: Question[] = [
     options: ["Verdadero.", "Falso."],
     correctAnswer: 1,
     comment:
-      "Falso: la enseñanza básica es obligatoria para todos los residentes, no solo para extranjeros.",
+      "Falso: la enseñanza básica es obligatoria y gratuita para todos los menores que residen en España, sean españoles o extranjeros, no está reservada a un colectivo en particular.",
   },
   {
     id: 2024,
@@ -1571,7 +1622,7 @@ export const questions: Question[] = [
     options: ["Verdadero.", "Falso."],
     correctAnswer: 0,
     comment:
-      "Verdadero: el derecho de asociación está reconocido en el artículo 22 de la Constitución.",
+      "Verdadero: el derecho de asociación, recogido en el artículo 22 de la Constitución, permite a cualquier persona formar parte de asociaciones culturales, deportivas, vecinales o de cualquier otro tipo lícito.",
   },
   {
     id: 2025,
@@ -1581,7 +1632,7 @@ export const questions: Question[] = [
     options: ["Verdadero.", "Falso."],
     correctAnswer: 0,
     comment:
-      "Verdadero: los sindicatos participan en la negociación colectiva con empresarios y Gobierno.",
+      "Verdadero: los sindicatos, reconocidos en el artículo 7 de la Constitución como pieza clave de la defensa de los intereses laborales, participan en la negociación colectiva con empresarios y en el diálogo social con el Gobierno.",
   },
   {
     id: 2026,
@@ -1590,7 +1641,7 @@ export const questions: Question[] = [
     options: ["Verdadero.", "Falso."],
     correctAnswer: 0,
     comment:
-      "Verdadero: el derecho de huelga está reconocido en el artículo 28.2 de la Constitución.",
+      "Verdadero: el derecho de huelga de los trabajadores está reconocido como derecho fundamental en el artículo 28.2 de la Constitución, con la obligación de mantener unos servicios mínimos esenciales.",
   },
   {
     id: 2027,
@@ -1600,7 +1651,7 @@ export const questions: Question[] = [
     options: ["Verdadero.", "Falso."],
     correctAnswer: 1,
     comment:
-      "Falso: la libertad ideológica está garantizada en todo el territorio nacional.",
+      "Falso: la libertad ideológica, religiosa y de culto reconocida en el artículo 16 de la Constitución está garantizada por igual en todo el territorio nacional, sin excepciones territoriales.",
   },
   {
     id: 2028,
@@ -1610,7 +1661,7 @@ export const questions: Question[] = [
     options: ["Verdadero.", "Falso."],
     correctAnswer: 1,
     comment:
-      "Falso: el acceso a la Seguridad Social pública no se pierde por estar desempleado.",
+      "Falso: estar desempleado no excluye a nadie del sistema público de Seguridad Social; de hecho, existen prestaciones específicas por desempleo y se mantiene la cobertura sanitaria durante esa situación.",
   },
   {
     id: 2029,
@@ -1620,7 +1671,7 @@ export const questions: Question[] = [
     options: ["Verdadero.", "Falso."],
     correctAnswer: 0,
     comment:
-      "Verdadero: el artículo 45 reconoce el derecho a un medio ambiente adecuado y el deber de conservarlo.",
+      "Verdadero: el artículo 45 de la Constitución reconoce el derecho a un medio ambiente adecuado y, de forma correlativa, impone a todos el deber de conservarlo, encomendando a los poderes públicos velar por su protección.",
   },
   {
     id: 2030,
@@ -1630,7 +1681,7 @@ export const questions: Question[] = [
     options: ["Verdadero.", "Falso."],
     correctAnswer: 0,
     comment:
-      "Verdadero: los poderes públicos deben fomentar la salud y el deporte (art. 43 CE).",
+      "Verdadero: el artículo 43 de la Constitución reconoce el derecho a la protección de la salud y encomienda a los poderes públicos fomentar la educación sanitaria y la práctica del deporte.",
   },
   {
     id: 2031,
@@ -1638,7 +1689,8 @@ export const questions: Question[] = [
     question: "La enseñanza básica en España es obligatoria y gratuita.",
     options: ["Verdadero.", "Falso."],
     correctAnswer: 0,
-    comment: "Verdadero: la enseñanza básica es obligatoria y gratuita.",
+    comment:
+      "Verdadero: la Constitución (art. 27.4) establece que la enseñanza básica, que abarca de los 6 a los 16 años, es obligatoria y gratuita para todos los residentes en España.",
   },
   {
     id: 2032,
@@ -1648,7 +1700,7 @@ export const questions: Question[] = [
     options: ["Verdadero.", "Falso."],
     correctAnswer: 0,
     comment:
-      "Verdadero: el artículo 14 prohíbe la discriminación por cualquier condición personal o social.",
+      "Verdadero: el artículo 14 de la Constitución prohíbe la discriminación por razón de nacimiento, raza, sexo, religión, opinión o cualquier otra condición o circunstancia personal o social.",
   },
   {
     id: 2033,
@@ -1658,7 +1710,7 @@ export const questions: Question[] = [
     options: ["Verdadero.", "Falso."],
     correctAnswer: 0,
     comment:
-      "Verdadero: la libertad de circulación y residencia está garantizada en todo el territorio (art. 19 CE).",
+      "Verdadero: el artículo 19 de la Constitución garantiza la libertad de circulación y de elección de residencia dentro del territorio nacional, sin necesidad de permisos ni autorizaciones internas.",
   },
   {
     id: 2034,
@@ -1668,7 +1720,7 @@ export const questions: Question[] = [
     options: ["Verdadero.", "Falso."],
     correctAnswer: 1,
     comment:
-      "Falso: los jueces son independientes y no actúan según instrucciones del Gobierno.",
+      "Falso: la independencia judicial es uno de los pilares del Estado de Derecho; los jueces están sometidos únicamente al imperio de la ley, no a instrucciones del Gobierno ni de ningún otro poder.",
   },
   {
     id: 2035,
@@ -1678,7 +1730,7 @@ export const questions: Question[] = [
     options: ["Verdadero.", "Falso."],
     correctAnswer: 0,
     comment:
-      "Verdadero: colaborar en casos de catástrofe pública es un deber ciudadano (art. 30.4 CE).",
+      "Verdadero: el artículo 30.4 de la Constitución habilita a la ley para regular los deberes de los ciudadanos en casos de grave riesgo, catástrofe o calamidad pública, como la colaboración con la protección civil.",
   },
   {
     id: 2036,
@@ -1688,7 +1740,7 @@ export const questions: Question[] = [
     options: ["Verdadero.", "Falso."],
     correctAnswer: 0,
     comment:
-      "Verdadero: la libertad de residencia permite elegir dónde vivir dentro de España.",
+      "Verdadero: la libertad de residencia, reconocida en el artículo 19 de la Constitución, permite a cualquier ciudadano elegir libremente el municipio o la comunidad autónoma donde quiere establecerse.",
   },
 
   // =============================================
@@ -1705,7 +1757,7 @@ export const questions: Question[] = [
     ],
     correctAnswer: 2,
     comment:
-      "Cáceres y Badajoz son las dos provincias que forman la comunidad de Extremadura.",
+      "Cáceres y Badajoz son las dos únicas provincias que componen la comunidad autónoma de Extremadura, situada en el oeste de España, fronteriza con Portugal.",
   },
   {
     id: 3002,
@@ -1713,7 +1765,8 @@ export const questions: Question[] = [
     question: "¿Cuál es la capital de la Comunidad Valenciana?",
     options: ["Alicante.", "Castellón.", "Valencia."],
     correctAnswer: 2,
-    comment: "Valencia es la capital de la Comunidad Valenciana.",
+    comment:
+      "Valencia es la capital de la Comunidad Valenciana y también la tercera ciudad más poblada de España, conocida por su huerta, su puerto y la Ciudad de las Artes y las Ciencias.",
   },
   {
     id: 3003,
@@ -1725,7 +1778,8 @@ export const questions: Question[] = [
       "En el océano Atlántico.",
     ],
     correctAnswer: 1,
-    comment: "Las Islas Baleares se sitúan en el mar Mediterráneo.",
+    comment:
+      "Las Islas Baleares (Mallorca, Menorca, Ibiza y Formentera, entre otras) se sitúan en el mar Mediterráneo, frente a la costa este de la península ibérica.",
   },
   {
     id: 3004,
@@ -1735,7 +1789,7 @@ export const questions: Question[] = [
     options: ["Marisma.", "Cordillera.", "Meseta."],
     correctAnswer: 2,
     comment:
-      "La Meseta central es la gran llanura interior de la península ibérica.",
+      "La Meseta central es la gran llanura elevada que ocupa buena parte del centro de la península ibérica, dividida por el Sistema Central en submeseta norte y submeseta sur.",
   },
   {
     id: 3005,
@@ -1744,7 +1798,7 @@ export const questions: Question[] = [
     options: ["Aragón.", "Navarra.", "Castilla-La Mancha."],
     correctAnswer: 0,
     comment:
-      "El Parque Nacional de Ordesa y Monte Perdido se encuentra en Aragón, en el Pirineo aragonés.",
+      "El Parque Nacional de Ordesa y Monte Perdido se encuentra en el Pirineo aragonés, en la provincia de Huesca, y fue uno de los primeros parques nacionales declarados en España, en 1918.",
   },
   {
     id: 3006,
@@ -1752,7 +1806,8 @@ export const questions: Question[] = [
     question: "¿En qué comunidad autónoma están Guadalajara y Cuenca?",
     options: ["En Castilla y León.", "En Castilla-La Mancha.", "En Cantabria."],
     correctAnswer: 1,
-    comment: "Guadalajara y Cuenca son provincias de Castilla-La Mancha.",
+    comment:
+      "Guadalajara y Cuenca son dos de las cinco provincias que forman Castilla-La Mancha, junto con Albacete, Ciudad Real y Toledo, capital de la comunidad.",
   },
   {
     id: 3007,
@@ -1762,7 +1817,7 @@ export const questions: Question[] = [
     options: ["Galicia.", "Asturias.", "Cantabria."],
     correctAnswer: 0,
     comment:
-      "Santiago de Compostela es la capital de la comunidad autónoma de Galicia.",
+      "Santiago de Compostela, meta final del Camino de Santiago, es la capital de la comunidad autónoma de Galicia, en el noroeste de España.",
   },
   {
     id: 3008,
@@ -1770,7 +1825,8 @@ export const questions: Question[] = [
     question: "¿Dónde está Almería?",
     options: ["En Andalucía.", "En Canarias.", "En Aragón."],
     correctAnswer: 0,
-    comment: "Almería es una provincia de la comunidad autónoma de Andalucía.",
+    comment:
+      "Almería es una de las ocho provincias de Andalucía, situada en el extremo sureste peninsular, conocida por su clima semidesértico y su producción agrícola bajo plástico.",
   },
   {
     id: 3009,
@@ -1778,7 +1834,8 @@ export const questions: Question[] = [
     question: "La capital de la comunidad autónoma de Galicia es...",
     options: ["A Coruña.", "Vigo.", "Santiago de Compostela."],
     correctAnswer: 2,
-    comment: "Santiago de Compostela es la capital de Galicia.",
+    comment:
+      "Santiago de Compostela es la capital administrativa de Galicia, aunque A Coruña y Vigo son las ciudades gallegas con mayor población.",
   },
   {
     id: 3010,
@@ -1786,7 +1843,8 @@ export const questions: Question[] = [
     question: "¿Cuál de estos ríos desemboca en el mar Mediterráneo?",
     options: ["El Tajo.", "El Júcar.", "El Duero."],
     correctAnswer: 1,
-    comment: "El río Júcar desemboca en el mar Mediterráneo.",
+    comment:
+      "El río Júcar nace en la Serranía de Cuenca y desemboca en el mar Mediterráneo, cerca de Cullera (Valencia); el Tajo y el Duero, en cambio, vierten sus aguas en el océano Atlántico.",
   },
   {
     id: 3011,
@@ -1799,7 +1857,7 @@ export const questions: Question[] = [
     ],
     correctAnswer: 0,
     comment:
-      "El Aneto, el pico más alto de los Pirineos, se encuentra en esa cordillera.",
+      "El Aneto, con 3.404 metros, es el pico más alto de los Pirineos y de toda Cataluña, y se encuentra en el macizo de la Maladeta, en la provincia de Huesca.",
   },
   {
     id: 3012,
@@ -1808,7 +1866,7 @@ export const questions: Question[] = [
     options: ["Navarra.", "País Vasco.", "La Rioja."],
     correctAnswer: 1,
     comment:
-      "Vitoria-Gasteiz es la sede administrativa (capital) del País Vasco.",
+      "Vitoria-Gasteiz es la capital administrativa del País Vasco, sede del Parlamento y del Gobierno vasco, aunque Bilbao es la ciudad más poblada de la comunidad.",
   },
   {
     id: 3013,
@@ -1821,7 +1879,7 @@ export const questions: Question[] = [
     ],
     correctAnswer: 1,
     comment:
-      "España se organiza en comunidades autónomas y dos ciudades autónomas (Ceuta y Melilla).",
+      "España se organiza territorialmente en 17 comunidades autónomas y 2 ciudades autónomas (Ceuta y Melilla), cada una con sus propias instituciones y competencias.",
   },
   {
     id: 3014,
@@ -1830,7 +1888,7 @@ export const questions: Question[] = [
     options: ["Cataluña.", "Aragón.", "Castilla y León."],
     correctAnswer: 0,
     comment:
-      "El Parque Nacional de Aigüestortes se encuentra en Cataluña, en el Pirineo catalán.",
+      "El Parque Nacional de Aigüestortes i Estany de Sant Maurici se encuentra en el Pirineo catalán, en la provincia de Lleida, y es el único parque nacional situado íntegramente en Cataluña.",
   },
   {
     id: 3015,
@@ -1839,7 +1897,7 @@ export const questions: Question[] = [
     options: ["Almería.", "Melilla.", "Cádiz."],
     correctAnswer: 1,
     comment:
-      "Ceuta y Melilla son las ciudades autónomas españolas situadas en el norte de África.",
+      "Ceuta y Melilla son las dos ciudades autónomas españolas situadas en el norte de África, fronterizas con Marruecos, cada una con su propio Estatuto de Autonomía.",
   },
   {
     id: 3016,
@@ -1849,7 +1907,7 @@ export const questions: Question[] = [
     options: ["Canarias.", "Comunidad Valenciana."],
     correctAnswer: 1,
     comment:
-      "La Comunidad Valenciana presenta un clima mediterráneo con veranos muy calurosos e inviernos frescos.",
+      "El interior de la Comunidad Valenciana presenta un clima mediterráneo continentalizado, con veranos muy calurosos e inviernos frescos, en contraste con el clima subtropical y suave de Canarias durante todo el año.",
   },
   {
     id: 3017,
@@ -1857,7 +1915,8 @@ export const questions: Question[] = [
     question: "¿Cuál de estos ríos desemboca en el océano Atlántico?",
     options: ["El Guadalquivir.", "El Manzanares.", "El Júcar."],
     correctAnswer: 0,
-    comment: "El río Guadalquivir desemboca en el océano Atlántico.",
+    comment:
+      "El río Guadalquivir, el más largo de Andalucía, desemboca en el océano Atlántico por Sanlúcar de Barrameda, tras atravesar Córdoba y Sevilla.",
   },
   {
     id: 3018,
@@ -1867,7 +1926,7 @@ export const questions: Question[] = [
     options: ["Burgos.", "Huesca.", "Guadalajara."],
     correctAnswer: 0,
     comment:
-      "Burgos es una de las provincias de la comunidad de Castilla y León.",
+      "Burgos es una de las nueve provincias de Castilla y León, la comunidad autónoma con mayor extensión territorial de España.",
   },
   {
     id: 3019,
@@ -1875,7 +1934,8 @@ export const questions: Question[] = [
     question: "¿En qué comunidad autónoma está la ciudad de Huesca?",
     options: ["Castilla-La Mancha.", "Aragón.", "Extremadura."],
     correctAnswer: 1,
-    comment: "Huesca pertenece a la comunidad autónoma de Aragón.",
+    comment:
+      "Huesca es una de las tres provincias de Aragón, junto con Zaragoza (capital de la comunidad) y Teruel.",
   },
   {
     id: 3020,
@@ -1883,7 +1943,8 @@ export const questions: Question[] = [
     question: "Canarias tiene un clima...",
     options: ["mediterráneo.", "oceánico.", "subtropical."],
     correctAnswer: 2,
-    comment: "Canarias tiene un clima subtropical, cálido durante todo el año.",
+    comment:
+      "Canarias goza de un clima subtropical suave y estable durante todo el año, gracias a su situación cerca del trópico y a la influencia de los vientos alisios.",
   },
   {
     id: 3021,
@@ -1892,7 +1953,7 @@ export const questions: Question[] = [
     options: ["Ebro.", "Duero.", "Tajo."],
     correctAnswer: 0,
     comment:
-      "El río Ebro es el principal que desemboca en el mar Mediterráneo.",
+      "El Ebro es el río de mayor caudal de España y el principal que desemboca en el Mediterráneo, formando un extenso delta en su tramo final en Tarragona.",
   },
   {
     id: 3022,
@@ -1900,7 +1961,8 @@ export const questions: Question[] = [
     question: "España está entre los países de Europa más...",
     options: ["lluviosos.", "montañosos.", "fríos."],
     correctAnswer: 1,
-    comment: "España es uno de los países más montañosos de Europa.",
+    comment:
+      "España es, después de Suiza, el país más montañoso de Europa: la altitud media de su territorio ronda los 650 metros sobre el nivel del mar.",
   },
   {
     id: 3023,
@@ -1908,7 +1970,8 @@ export const questions: Question[] = [
     question: "¿En qué provincia está el parque nacional de Monfragüe?",
     options: ["En Cáceres.", "En Murcia.", "En Ciudad Real."],
     correctAnswer: 0,
-    comment: "El Parque Nacional de Monfragüe está en la provincia de Cáceres.",
+    comment:
+      "El Parque Nacional de Monfragüe se encuentra en la provincia de Cáceres, en Extremadura, y es uno de los espacios más importantes de Europa para las aves rapaces.",
   },
   {
     id: 3024,
@@ -1916,7 +1979,8 @@ export const questions: Question[] = [
     question: "¿Cuál es la capital de la comunidad autónoma de Extremadura?",
     options: ["Cáceres.", "Badajoz.", "Mérida."],
     correctAnswer: 2,
-    comment: "Mérida es la capital de la comunidad autónoma de Extremadura.",
+    comment:
+      "Mérida es la capital de Extremadura, aunque no es la ciudad más poblada de la comunidad; fue una importante ciudad romana, hoy Patrimonio de la Humanidad por su conjunto arqueológico.",
   },
 
   // =============================================
@@ -1930,7 +1994,7 @@ export const questions: Question[] = [
     options: ["Don Juan.", "Sancho Panza.", "Doña Inés."],
     correctAnswer: 1,
     comment:
-      "Sancho Panza es el fiel escudero de don Quijote en la novela de Cervantes.",
+      "Sancho Panza es el fiel escudero de don Quijote en la novela de Miguel de Cervantes; su contraste entre idealismo y sentido práctico es uno de los grandes motores de la obra.",
   },
   {
     id: 4002,
@@ -1939,7 +2003,7 @@ export const questions: Question[] = [
     options: ["Almudena Grandes.", "Montserrat Caballé.", "Margarita Salas."],
     correctAnswer: 2,
     comment:
-      "Margarita Salas fue una destacada científica española, pionera en bioquímica y biología molecular.",
+      "Margarita Salas fue una pionera de la bioquímica y la biología molecular en España, descubridora de la ADN polimerasa del fago Phi29, con aplicaciones muy relevantes en biotecnología.",
   },
   {
     id: 4003,
@@ -1952,7 +2016,7 @@ export const questions: Question[] = [
     ],
     correctAnswer: 0,
     comment:
-      "Federico García Lorca escribió el drama La casa de Bernarda Alba.",
+      "Federico García Lorca escribió el drama La casa de Bernarda Alba, su última obra teatral, que retrata la represión social y familiar en la España rural.",
   },
   {
     id: 4004,
@@ -1961,7 +2025,7 @@ export const questions: Question[] = [
     options: ["Carmen Laforet.", "Ana María Matute.", "María Dueñas."],
     correctAnswer: 0,
     comment:
-      "Carmen Laforet escribió Nada, novela ambientada en la posguerra española.",
+      "Carmen Laforet escribió Nada, novela publicada en 1945 que retrata la dureza de la posguerra española, y con la que ganó el primer Premio Nadal con solo 23 años.",
   },
   {
     id: 4005,
@@ -1969,7 +2033,8 @@ export const questions: Question[] = [
     question: "¿Qué músico compuso El amor brujo?",
     options: ["Manuel de Falla.", "Isaac Albéniz.", "Joaquín Rodrigo."],
     correctAnswer: 0,
-    comment: "Manuel de Falla compuso la obra El amor brujo.",
+    comment:
+      "Manuel de Falla compuso El amor brujo, un ballet inspirado en el folclore andaluz que incluye piezas tan populares como la Danza ritual del fuego.",
   },
   {
     id: 4006,
@@ -1977,7 +2042,8 @@ export const questions: Question[] = [
     question: "¿Qué es típico en la Noche de San Juan?",
     options: ["Comer uvas.", "Encender hogueras.", "Regalar libros."],
     correctAnswer: 1,
-    comment: "En la Noche de San Juan es tradicional encender hogueras.",
+    comment:
+      "En la Noche de San Juan (23 de junio), que coincide con el solsticio de verano, es tradicional encender hogueras en la playa o en las plazas para dar la bienvenida al verano.",
   },
   {
     id: 4007,
@@ -1987,7 +2053,7 @@ export const questions: Question[] = [
     options: ["La gaita.", "La guitarra.", "El piano."],
     correctAnswer: 1,
     comment:
-      "La guitarra es el instrumento más característico de la música flamenca.",
+      "La guitarra española (o guitarra flamenca) es el instrumento de acompañamiento por excelencia del flamenco, junto al cante y el baile, que forman el llamado «trío flamenco».",
   },
   {
     id: 4008,
@@ -1995,7 +2061,8 @@ export const questions: Question[] = [
     question: "Isabel Coixet es una…",
     options: ["cantante pop.", "bailarina clásica.", "directora de cine."],
     correctAnswer: 2,
-    comment: "Isabel Coixet es una reconocida directora de cine española.",
+    comment:
+      "Isabel Coixet es una reconocida directora y guionista de cine española, autora de películas como La vida secreta de las palabras, con proyección internacional.",
   },
   {
     id: 4009,
@@ -2004,7 +2071,7 @@ export const questions: Question[] = [
     options: ["Rosalía.", "Marisol.", "Lola Flores."],
     correctAnswer: 0,
     comment:
-      "Rosalía es una de las cantantes españolas más populares en la actualidad.",
+      "Rosalía es una de las artistas españolas más populares en la actualidad, conocida por fusionar el flamenco con géneros urbanos y por su proyección internacional.",
   },
   {
     id: 4010,
@@ -2013,7 +2080,8 @@ export const questions: Question[] = [
       "¿En qué ciudad de España hay una mezquita que es Patrimonio de la Humanidad?",
     options: ["Santiago de Compostela.", "Madrid.", "Córdoba."],
     correctAnswer: 2,
-    comment: "La Mezquita-Catedral de Córdoba es Patrimonio de la Humanidad.",
+    comment:
+      "La Mezquita-Catedral de Córdoba, declarada Patrimonio de la Humanidad por la Unesco en 1984, es uno de los máximos exponentes del arte islámico en Occidente.",
   },
   {
     id: 4011,
@@ -2023,7 +2091,7 @@ export const questions: Question[] = [
     options: ["En Sevilla.", "En Córdoba.", "En Granada."],
     correctAnswer: 2,
     comment:
-      "La Alhambra, Patrimonio de la Humanidad, se encuentra en Granada.",
+      "La Alhambra, palacio y fortaleza nazarí declarado Patrimonio de la Humanidad, se encuentra en Granada y es uno de los monumentos más visitados de España.",
   },
   {
     id: 4012,
@@ -2033,7 +2101,7 @@ export const questions: Question[] = [
     options: ["Pilar Miró.", "Sara Baras.", "Penélope Cruz."],
     correctAnswer: 0,
     comment:
-      "Pilar Miró fue una influyente directora y guionista del cine español.",
+      "Pilar Miró fue una influyente directora y guionista de cine, así como directora general de RTVE, cuyo trabajo contribuyó a modernizar el cine español tras la Transición.",
   },
   {
     id: 4013,
@@ -2046,7 +2114,7 @@ export const questions: Question[] = [
     ],
     correctAnswer: 0,
     comment:
-      "Irene Vallejo escribió el ensayo de éxito El infinito en un junco.",
+      "Irene Vallejo escribió el ensayo El infinito en un junco, un recorrido por la historia del libro que se convirtió en un fenómeno editorial y ha sido traducido a numerosos idiomas.",
   },
   {
     id: 4014,
@@ -2060,7 +2128,7 @@ export const questions: Question[] = [
     ],
     correctAnswer: 1,
     comment:
-      "El CSIC es la principal institución pública de investigación científica en España.",
+      "El CSIC (Consejo Superior de Investigaciones Científicas) es la mayor institución pública dedicada a la investigación en España, con centros repartidos por todo el país en múltiples áreas del conocimiento.",
   },
   {
     id: 4015,
@@ -2068,7 +2136,8 @@ export const questions: Question[] = [
     question: "Paco de Lucía fue un famoso….",
     options: ["científico.", "guitarrista.", "pintor."],
     correctAnswer: 1,
-    comment: "Paco de Lucía fue un célebre guitarrista de flamenco.",
+    comment:
+      "Paco de Lucía fue uno de los guitarristas de flamenco más influyentes de la historia, reconocido por su innovación técnica y por acercar el flamenco a públicos de todo el mundo.",
   },
   {
     id: 4016,
@@ -2076,7 +2145,8 @@ export const questions: Question[] = [
     question: "¿Qué celebramos el 24 de diciembre?",
     options: ["Carnaval.", "Nochebuena.", "San Juan."],
     correctAnswer: 1,
-    comment: "El 24 de diciembre se celebra la Nochebuena.",
+    comment:
+      "El 24 de diciembre se celebra la Nochebuena, la cena familiar previa a la Navidad, una de las fiestas más señaladas del calendario español.",
   },
   {
     id: 4017,
@@ -2084,7 +2154,8 @@ export const questions: Question[] = [
     question: "Juan Mari Arzak es un famoso....",
     options: ["escritor.", "músico.", "cocinero."],
     correctAnswer: 2,
-    comment: "Juan Mari Arzak es un reconocido cocinero español.",
+    comment:
+      "Juan Mari Arzak es un reconocido cocinero vasco, pionero de la nueva cocina española y uno de los primeros chefs europeos en obtener tres estrellas Michelin.",
   },
   {
     id: 4018,
@@ -2097,7 +2168,7 @@ export const questions: Question[] = [
     ],
     correctAnswer: 0,
     comment:
-      "Clara Campoamor fue una destacada defensora del sufragio femenino en España.",
+      "Clara Campoamor fue una abogada y política española que defendió con firmeza el sufragio femenino durante la Segunda República, logrando que las mujeres pudieran votar en España a partir de 1933.",
   },
   {
     id: 4019,
@@ -2106,7 +2177,7 @@ export const questions: Question[] = [
     options: ["Flamenco.", "Villancicos.", "Jotas."],
     correctAnswer: 1,
     comment:
-      "Los villancicos son las canciones tradicionales que se cantan en Navidad.",
+      "Los villancicos son las canciones tradicionales de temática navideña que se cantan en España durante las fiestas de diciembre, muchas de ellas de origen popular y siglos de antigüedad.",
   },
   {
     id: 4020,
@@ -2114,7 +2185,8 @@ export const questions: Question[] = [
     question: "La Liga y la Copa del Rey son competiciones de…",
     options: ["natación.", "atletismo.", "fútbol."],
     correctAnswer: 2,
-    comment: "La Liga y la Copa del Rey son competiciones de fútbol.",
+    comment:
+      "La Liga (competición de clubes por puntos a lo largo de la temporada) y la Copa del Rey (torneo de eliminación directa) son las dos principales competiciones de fútbol en España.",
   },
   {
     id: 4021,
@@ -2123,7 +2195,7 @@ export const questions: Question[] = [
     options: ["María Zambrano.", "Pablo Picasso.", "Vicente Aleixandre."],
     correctAnswer: 2,
     comment:
-      "Vicente Aleixandre recibió el Premio Nobel de Literatura en 1977.",
+      "Vicente Aleixandre, poeta de la Generación del 27, recibió el Premio Nobel de Literatura en 1977; España cuenta también con otros premios Nobel de literatura como Cela o Juan Ramón Jiménez.",
   },
   {
     id: 4022,
@@ -2131,7 +2203,8 @@ export const questions: Question[] = [
     question: "¿Qué fiesta se celebra en Pamplona el 7 de julio?",
     options: ["Los sanfermines.", "Las Fallas.", "La Feria de Abril."],
     correctAnswer: 0,
-    comment: "Los sanfermines se celebran en Pamplona a partir del 7 de julio.",
+    comment:
+      "Los sanfermines, con su famoso encierro de toros por las calles de Pamplona, comienzan el 6 de julio con el chupinazo y son una de las fiestas más internacionales de España.",
   },
   {
     id: 4023,
@@ -2144,7 +2217,7 @@ export const questions: Question[] = [
     ],
     correctAnswer: 0,
     comment:
-      "Teresa Perales y Daniel Molina son destacados deportistas paralímpicos españoles.",
+      "Teresa Perales, nadadora, y Daniel Molina son destacados deportistas paralímpicos españoles, referentes del deporte adaptado con numerosas medallas en Juegos Paralímpicos.",
   },
   {
     id: 4024,
@@ -2154,7 +2227,7 @@ export const questions: Question[] = [
     options: ["Lentejas.", "Uvas.", "Aceitunas."],
     correctAnswer: 1,
     comment:
-      "En Nochevieja los españoles comen doce uvas al son de las campanadas.",
+      "En Nochevieja los españoles comen doce uvas, una por cada campanada de medianoche, como tradición de buena suerte para el año que empieza.",
   },
   {
     id: 4025,
@@ -2163,7 +2236,7 @@ export const questions: Question[] = [
     options: ["Maruja Mallo.", "Carmen Maura.", "Clara Lago."],
     correctAnswer: 0,
     comment:
-      "Maruja Mallo fue una pintora española, autora del cuadro La verbena.",
+      "Maruja Mallo fue una pintora vinculada a la Generación del 27, autora del cuadro La verbena, y una de las pocas mujeres reconocidas en las vanguardias artísticas españolas de esa época.",
   },
   {
     id: 4026,
@@ -2175,7 +2248,8 @@ export const questions: Question[] = [
       "Museo Thyssen-Bornemisza.",
     ],
     correctAnswer: 1,
-    comment: "El Guernica de Picasso se expone en el Museo Reina Sofía.",
+    comment:
+      "El Guernica, obra maestra de Pablo Picasso sobre el bombardeo de la localidad vasca en 1937, se expone en el Museo Reina Sofía de Madrid desde 1992.",
   },
   {
     id: 4027,
@@ -2184,7 +2258,8 @@ export const questions: Question[] = [
       "¿Qué escritora española escribe en otra lengua oficial de España?",
     options: ["Mercè Rodoreda.", "Almudena Grandes.", "Ana María Matute."],
     correctAnswer: 0,
-    comment: "Mercè Rodoreda es una destacada escritora en lengua catalana.",
+    comment:
+      "Mercè Rodoreda es una destacada escritora en lengua catalana, autora de La plaça del Diamant, una de las novelas más traducidas de la literatura catalana del siglo XX.",
   },
   {
     id: 4028,
@@ -2197,7 +2272,7 @@ export const questions: Question[] = [
     ],
     correctAnswer: 0,
     comment:
-      "En la España medieval convivieron las culturas cristiana, judía y musulmana.",
+      "Durante buena parte de la Edad Media convivieron en la Península las culturas cristiana, judía y musulmana, dando lugar a periodos de intercambio cultural, científico y artístico conocidos como convivencia.",
   },
   {
     id: 4029,
@@ -2209,7 +2284,8 @@ export const questions: Question[] = [
       "el Día del Libro.",
     ],
     correctAnswer: 0,
-    comment: "El 6 de diciembre se celebra el Día de la Constitución.",
+    comment:
+      "El 6 de diciembre se celebra el Día de la Constitución, en conmemoración del referéndum de 1978 en el que el pueblo español la ratificó.",
   },
   {
     id: 4030,
@@ -2219,7 +2295,7 @@ export const questions: Question[] = [
     options: ["Barcelona.", "Madrid.", "Córdoba."],
     correctAnswer: 2,
     comment:
-      "Córdoba fue un importante centro científico durante la época de Al-Ándalus.",
+      "Córdoba, capital del Califato omeya de Al-Ándalus, fue durante los siglos X y XI uno de los grandes centros científicos y culturales de Europa y del mundo islámico.",
   },
   {
     id: 4031,
@@ -2227,7 +2303,8 @@ export const questions: Question[] = [
     question: "¿En qué ciudad española está el Museo Guggenheim?",
     options: ["Bilbao.", "Madrid.", "Valencia."],
     correctAnswer: 0,
-    comment: "El Museo Guggenheim se encuentra en Bilbao.",
+    comment:
+      "El Museo Guggenheim, diseñado por el arquitecto Frank Gehry e inaugurado en 1997, se encuentra en Bilbao y transformó la ciudad en un referente de arte contemporáneo y arquitectura.",
   },
   {
     id: 4032,
@@ -2236,7 +2313,7 @@ export const questions: Question[] = [
     options: ["actores.", "escritores.", "pintores."],
     correctAnswer: 1,
     comment:
-      "El Premio Cervantes reconoce la trayectoria de escritores en lengua española.",
+      "El Premio Cervantes, considerado el máximo galardón de las letras en lengua española, reconoce cada año la trayectoria de un escritor o escritora hispanohablante.",
   },
   {
     id: 4033,
@@ -2244,7 +2321,8 @@ export const questions: Question[] = [
     question: "¿Qué premio reconoce a los mejores actores y películas?",
     options: ["Premio Goya.", "Premio Nobel.", "Premio Cervantes."],
     correctAnswer: 0,
-    comment: "Los Premios Goya reconocen lo mejor del cine español.",
+    comment:
+      "Los Premios Goya, entregados anualmente por la Academia de Cine, reconocen lo mejor del cine español del año, desde interpretación hasta dirección o guion.",
   },
   {
     id: 4034,
@@ -2258,7 +2336,7 @@ export const questions: Question[] = [
     ],
     correctAnswer: 1,
     comment:
-      "Los Premios Princesa de Asturias reconocen el mérito científico, cultural y humanístico.",
+      "Los Premios Princesa de Asturias, entregados en Oviedo, reconocen anualmente el mérito científico, técnico, cultural, social y humanístico a nivel internacional en varias categorías.",
   },
   {
     id: 4035,
@@ -2266,7 +2344,8 @@ export const questions: Question[] = [
     question: "¿Cuál de estos deportes es muy popular en España?",
     options: ["El fútbol.", "El esquí.", "El golf."],
     correctAnswer: 0,
-    comment: "El fútbol es, con diferencia, el deporte más popular en España.",
+    comment:
+      "El fútbol es, con diferencia, el deporte más seguido y practicado en España, con la Liga como una de las competiciones de clubes más importantes del mundo.",
   },
   {
     id: 4036,
@@ -2274,7 +2353,8 @@ export const questions: Question[] = [
     question: "¿Cuál de estos deportistas juega al tenis?",
     options: ["Pau Gasol.", "Carlos Sainz.", "Carlos Alcaraz."],
     correctAnswer: 2,
-    comment: "Carlos Alcaraz es un tenista español de éxito internacional.",
+    comment:
+      "Carlos Alcaraz es un tenista español que ha llegado al número uno del mundo y ha ganado varios títulos de Grand Slam, continuando la gran tradición española en este deporte.",
   },
 
   // =============================================
@@ -2292,7 +2372,7 @@ export const questions: Question[] = [
     ],
     correctAnswer: 1,
     comment:
-      "La TIE es el documento que acredita la residencia legal de los extranjeros en España.",
+      "La TIE (Tarjeta de Identidad de Extranjero) acredita la situación de residencia legal en España de las personas extranjeras, a diferencia del DNI, que solo pueden obtener los ciudadanos españoles.",
   },
   {
     id: 5002,
@@ -2306,7 +2386,7 @@ export const questions: Question[] = [
     ],
     correctAnswer: 0,
     comment:
-      "El certificado de empadronamiento acredita el domicilio de una persona en un municipio.",
+      "El certificado de empadronamiento, expedido por el Ayuntamiento, acredita el domicilio habitual de una persona en un municipio y es necesario para muchos trámites, como el acceso a la sanidad o la escolarización.",
   },
   {
     id: 5003,
@@ -2315,7 +2395,7 @@ export const questions: Question[] = [
     options: ["Al DNI.", "Al permiso de conducir.", "Al libro de familia."],
     correctAnswer: 2,
     comment:
-      "El registro electrónico individual sustituye al tradicional libro de familia en formato papel.",
+      "El registro electrónico individual del Registro Civil sustituye progresivamente al tradicional libro de familia en papel, recogiendo digitalmente los datos de nacimiento, matrimonio y filiación.",
   },
   {
     id: 5004,
@@ -2324,7 +2404,7 @@ export const questions: Question[] = [
     options: ["16 años.", "18 años.", "20 años."],
     correctAnswer: 1,
     comment:
-      "La edad mínima para obtener el carné de conducir de turismos (clase B) es 18 años.",
+      "La edad mínima para obtener el permiso de conducir de turismos (clase B) en España es 18 años, aunque para motocicletas pequeñas o ciclomotores se permite conducir desde edades inferiores.",
   },
   {
     id: 5005,
@@ -2337,7 +2417,7 @@ export const questions: Question[] = [
     ],
     correctAnswer: 0,
     comment:
-      "La DGT es el organismo responsable de la expedición del carné de conducir.",
+      "La Dirección General de Tráfico (DGT) es el organismo del Ministerio del Interior responsable de expedir el carné de conducir y de gestionar los exámenes teóricos y prácticos.",
   },
   {
     id: 5006,
@@ -2350,7 +2430,7 @@ export const questions: Question[] = [
     ],
     correctAnswer: 2,
     comment:
-      "Para obtener el carné de conducir hay que superar un examen teórico y otro práctico.",
+      "Para obtener el carné de conducir es necesario superar tanto el examen teórico, sobre normas y señales de tráfico, como el examen práctico de conducción en circulación real.",
   },
   {
     id: 5007,
@@ -2363,7 +2443,7 @@ export const questions: Question[] = [
     ],
     correctAnswer: 0,
     comment:
-      "El libro de familia (o su equivalente electrónico) se tramita en el Registro Civil.",
+      "El libro de familia, o su equivalente en el registro electrónico individual, se tramita en el Registro Civil, que también gestiona nacimientos, matrimonios y defunciones.",
   },
   {
     id: 5008,
@@ -2371,7 +2451,8 @@ export const questions: Question[] = [
     question: "¿Cuál de estos canales de televisión es autonómico?",
     options: ["Telecinco.", "Nova.", "Canal Sur."],
     correctAnswer: 2,
-    comment: "Canal Sur es una televisión autonómica, propia de Andalucía.",
+    comment:
+      "Canal Sur es la televisión pública autonómica de Andalucía, gestionada por la Radio y Televisión de Andalucía (RTVA), a diferencia de Telecinco o Nova, que son cadenas privadas de ámbito nacional.",
   },
   {
     id: 5009,
@@ -2380,7 +2461,7 @@ export const questions: Question[] = [
     options: ["12 semanas.", "19 semanas.", "22 semanas."],
     correctAnswer: 1,
     comment:
-      "El permiso por nacimiento y cuidado de menor dura 19 semanas para cada progenitor.",
+      "El permiso por nacimiento y cuidado de menor tiene actualmente una duración de 19 semanas para cada progenitor, tras la igualación progresiva entre madre y padre llevada a cabo en los últimos años.",
   },
   {
     id: 5010,
@@ -2390,7 +2471,7 @@ export const questions: Question[] = [
     options: ["0,5.", "0,7.", "0,9."],
     correctAnswer: 0,
     comment:
-      "La tasa máxima de alcohol permitida a los conductores en general es de 0,5 g/l.",
+      "La tasa máxima de alcohol en sangre permitida a los conductores en general es de 0,5 g/l (0,3 g/l para conductores noveles o profesionales); superarla supone una infracción administrativa o incluso penal.",
   },
   {
     id: 5011,
@@ -2403,7 +2484,7 @@ export const questions: Question[] = [
     ],
     correctAnswer: 1,
     comment:
-      "El piso en un edificio de viviendas es el tipo de residencia más habitual en España.",
+      "El piso en un edificio de viviendas colectivas es el tipo de residencia más común en España, especialmente en las grandes ciudades, frente a las viviendas unifamiliares.",
   },
   {
     id: 5012,
@@ -2413,7 +2494,7 @@ export const questions: Question[] = [
     options: ["Cantabria.", "Andalucía.", "La Rioja."],
     correctAnswer: 1,
     comment:
-      "Andalucía es la principal región productora de aceite de oliva de España.",
+      "Andalucía es la principal región productora de aceite de oliva de España y del mundo, con provincias como Jaén concentrando una parte muy relevante de la producción nacional.",
   },
   {
     id: 5013,
@@ -2426,7 +2507,8 @@ export const questions: Question[] = [
       "ITE (Inspección Técnica de Edificios).",
     ],
     correctAnswer: 1,
-    comment: "La ITV es la revisión técnica obligatoria de los vehículos.",
+    comment:
+      "La ITV (Inspección Técnica de Vehículos) es la revisión periódica y obligatoria que comprueba el correcto estado mecánico y de seguridad de los vehículos; el IBI, en cambio, es un impuesto municipal sobre inmuebles.",
   },
   {
     id: 5014,
@@ -2436,7 +2518,7 @@ export const questions: Question[] = [
     options: ["bocadillo.", "tapa.", "primer plato."],
     correctAnswer: 1,
     comment:
-      "La tapa es el pequeño aperitivo típico que acompaña a la bebida en bares y restaurantes.",
+      "La tapa es el pequeño aperitivo, típicamente español, que suele servirse junto a la bebida en bares y restaurantes, y que da nombre a toda una cultura social de «ir de tapas».",
   },
   {
     id: 5015,
@@ -2448,7 +2530,8 @@ export const questions: Question[] = [
       "En el Ministerio de Sanidad.",
     ],
     correctAnswer: 1,
-    comment: "La tarjeta sanitaria se tramita en el centro de salud.",
+    comment:
+      "La tarjeta sanitaria individual se solicita y tramita en el centro de salud correspondiente al domicilio, y da acceso a la atención médica dentro del Sistema Nacional de Salud.",
   },
   {
     id: 5016,
@@ -2456,7 +2539,8 @@ export const questions: Question[] = [
     question: "¿Con cuántos hijos una familia es numerosa?",
     options: ["Con 1 hijo.", "Con 2 hijos.", "Con 3 hijos."],
     correctAnswer: 2,
-    comment: "En España se considera familia numerosa a partir de tres hijos.",
+    comment:
+      "En España se reconoce oficialmente como familia numerosa a la que tiene tres o más hijos (o dos en determinados supuestos especiales, como discapacidad o familia monoparental), con derecho a ciertas ayudas y beneficios.",
   },
   {
     id: 5017,
@@ -2469,7 +2553,7 @@ export const questions: Question[] = [
     ],
     correctAnswer: 1,
     comment:
-      "En España el matrimonio es legal tanto entre personas del mismo como de distinto sexo desde 2005.",
+      "Desde julio de 2005, España fue uno de los primeros países del mundo en reconocer legalmente el matrimonio entre personas del mismo sexo, con los mismos derechos y deberes que el matrimonio heterosexual.",
   },
   {
     id: 5018,
@@ -2482,7 +2566,7 @@ export const questions: Question[] = [
     ],
     correctAnswer: 2,
     comment:
-      "Los perros deben inscribirse en el registro municipal correspondiente (Ayuntamiento).",
+      "Los perros deben inscribirse en el registro municipal de animales de compañía, gestionado por el Ayuntamiento, además de contar con microchip identificativo y cartilla sanitaria al día.",
   },
   {
     id: 5019,
@@ -2492,7 +2576,7 @@ export const questions: Question[] = [
     options: ["pimientos.", "patatas.", "tomates."],
     correctAnswer: 1,
     comment:
-      "La tortilla española se elabora principalmente con huevos y patatas.",
+      "La tortilla española, o tortilla de patatas, se elabora principalmente con huevos y patatas, con la eterna discusión popular sobre si debe llevar cebolla o no.",
   },
   {
     id: 5020,
@@ -2502,7 +2586,7 @@ export const questions: Question[] = [
     options: ["Gazpacho.", "Pizza.", "Pasta."],
     correctAnswer: 0,
     comment:
-      "El gazpacho es uno de los platos españoles más conocidos internacionalmente.",
+      "El gazpacho, sopa fría a base de tomate, pepino, pimiento y aceite de oliva, típica de Andalucía, es uno de los platos españoles más conocidos y consumidos internacionalmente, sobre todo en verano.",
   },
   {
     id: 5021,
@@ -2511,7 +2595,7 @@ export const questions: Question[] = [
     options: ["Tele 5.", "La 1.", "Antena 3."],
     correctAnswer: 1,
     comment:
-      "La 1 (TVE) es un canal de televisión público de titularidad estatal.",
+      "La 1 es el canal insignia de RTVE (Radiotelevisión Española), la corporación pública de titularidad estatal, mientras que Tele 5 y Antena 3 son cadenas privadas.",
   },
   {
     id: 5022,
@@ -2524,7 +2608,7 @@ export const questions: Question[] = [
     ],
     correctAnswer: 1,
     comment:
-      "Respetar el descanso vecinal evitando ruidos molestos es una norma habitual en comunidades de vecinos.",
+      "Respetar el descanso de los vecinos evitando ruidos molestos, especialmente durante la noche, es una norma habitual recogida en los estatutos de las comunidades de propietarios.",
   },
   {
     id: 5023,
@@ -2533,7 +2617,8 @@ export const questions: Question[] = [
       "¿Cuál de estos es el principal ingrediente de la paella valenciana?",
     options: ["Arroz.", "Chorizo.", "Garbanzos."],
     correctAnswer: 0,
-    comment: "El arroz es el ingrediente principal de la paella valenciana.",
+    comment:
+      "El arroz es el ingrediente principal de la paella valenciana, plato originario de la huerta de Valencia que, en su versión tradicional, se cocina con pollo, conejo y verduras de temporada.",
   },
   {
     id: 5024,
@@ -2541,7 +2626,8 @@ export const questions: Question[] = [
     question: "La sidra es una bebida típica de...",
     options: ["Asturias.", "Valencia.", "Canarias."],
     correctAnswer: 0,
-    comment: "La sidra es una bebida típica de Asturias.",
+    comment:
+      "La sidra, elaborada a partir de manzana fermentada, es la bebida más característica de Asturias, donde tradicionalmente se sirve «escanciada» para airearla antes de beberla.",
   },
   {
     id: 5025,
@@ -2554,7 +2640,7 @@ export const questions: Question[] = [
     ],
     correctAnswer: 2,
     comment:
-      "Desde 2017 los padres pueden acordar libremente el orden de los apellidos de sus hijos.",
+      "Desde una reforma legal de 2017, los progenitores pueden acordar libremente el orden de los dos apellidos de sus hijos, sin que exista ya la obligación tradicional de anteponer el apellido paterno.",
   },
   {
     id: 5026,
@@ -2562,7 +2648,8 @@ export const questions: Question[] = [
     question: "La Fiesta Nacional de España es el...",
     options: ["6 de diciembre.", "15 de agosto.", "12 de octubre."],
     correctAnswer: 2,
-    comment: "La Fiesta Nacional de España se celebra el 12 de octubre.",
+    comment:
+      "La Fiesta Nacional de España se celebra el 12 de octubre, coincidiendo con la festividad de la Virgen del Pilar y con la llegada de Colón a América en 1492, y suele incluir un desfile militar en Madrid.",
   },
   {
     id: 5027,
@@ -2572,7 +2659,7 @@ export const questions: Question[] = [
     options: ["Los lunes.", "Los domingos.", "Los sábados por la tarde."],
     correctAnswer: 1,
     comment:
-      "El pequeño comercio suele permanecer cerrado los domingos en la mayor parte de España.",
+      "El pequeño comercio suele permanecer cerrado los domingos y festivos en la mayor parte de España, aunque cada comunidad autónoma regula excepciones y zonas de gran afluencia turística.",
   },
   {
     id: 5028,
@@ -2584,7 +2671,8 @@ export const questions: Question[] = [
       "En el Ayuntamiento.",
     ],
     correctAnswer: 1,
-    comment: "El pasaporte se tramita en las comisarías de policía.",
+    comment:
+      "El pasaporte español se tramita en las comisarías de la Policía Nacional, previa cita, presentando el DNI en vigor y abonando la tasa correspondiente.",
   },
   {
     id: 5029,
@@ -2594,7 +2682,7 @@ export const questions: Question[] = [
     options: ["separación.", "discriminación.", "solidaridad."],
     correctAnswer: 1,
     comment:
-      "El Ministerio de Igualdad combate la violencia de género y la discriminación.",
+      "El Ministerio de Igualdad desarrolla políticas contra la violencia de género y contra la discriminación por razón de sexo, orientación sexual o identidad de género, entre otras.",
   },
   {
     id: 5030,
@@ -2604,7 +2692,7 @@ export const questions: Question[] = [
     options: ["Galicia.", "Cataluña.", "Castilla-La Mancha."],
     correctAnswer: 1,
     comment:
-      "Cataluña, especialmente la región del Penedès, es conocida por la producción de cava.",
+      "Cataluña, y en concreto la comarca del Penedès, es la principal región productora de cava, el vino espumoso español elaborado con el método tradicional.",
   },
   {
     id: 5031,
@@ -2618,7 +2706,7 @@ export const questions: Question[] = [
     ],
     correctAnswer: 1,
     comment:
-      "La tarjeta sanitaria es el documento necesario para acceder a la atención médica pública.",
+      "La tarjeta sanitaria individual es el documento que identifica al usuario dentro del Sistema Nacional de Salud y permite acceder a consultas, pruebas y tratamientos en centros públicos.",
   },
   {
     id: 5032,
@@ -2626,7 +2714,8 @@ export const questions: Question[] = [
     question: "El horario de Canarias, con respecto a la Península, es de...",
     options: ["dos horas menos.", "una hora menos.", "una hora más."],
     correctAnswer: 1,
-    comment: "Canarias tiene una hora menos que la España peninsular.",
+    comment:
+      "Canarias tiene una hora menos que la España peninsular y Baleares durante todo el año, al pertenecer a un huso horario distinto (GMT/UTC frente a GMT+1/UTC+1).",
   },
   {
     id: 5033,
@@ -2640,7 +2729,7 @@ export const questions: Question[] = [
     ],
     correctAnswer: 0,
     comment:
-      "La Selectividad (actualmente EvAU) es la prueba de acceso a la Universidad.",
+      "La Selectividad, actualmente denominada EvAU o EBAU según la comunidad autónoma, es la prueba que deben superar los estudiantes de Bachillerato para acceder a la universidad pública.",
   },
   {
     id: 5034,
@@ -2650,7 +2739,7 @@ export const questions: Question[] = [
     options: ["Petróleo.", "Aceite de oliva.", "Medicamentos."],
     correctAnswer: 0,
     comment:
-      "España importa petróleo, ya que no cuenta con reservas significativas propias.",
+      "España carece de reservas significativas de petróleo propias, por lo que depende en gran medida de las importaciones energéticas, a diferencia del aceite de oliva, del que es gran productora y exportadora.",
   },
   {
     id: 5035,
@@ -2664,7 +2753,7 @@ export const questions: Question[] = [
     ],
     correctAnswer: 2,
     comment:
-      "En España se pagan impuestos directos (como el IRPF) e indirectos (como el IVA).",
+      "El sistema tributario español combina impuestos directos, que gravan la renta o el patrimonio (como el IRPF), con impuestos indirectos, que gravan el consumo (como el IVA).",
   },
   {
     id: 5036,
@@ -2674,7 +2763,7 @@ export const questions: Question[] = [
     options: ["18 años.", "23 años.", "25 años."],
     correctAnswer: 2,
     comment:
-      "Los mayores de 25 años sin Bachillerato pueden acceder a la Universidad mediante una prueba específica.",
+      "Los mayores de 25 años que no tienen el título de Bachillerato pueden acceder a la universidad superando una prueba de acceso específica, pensada para quienes retoman los estudios en la edad adulta.",
   },
   {
     id: 5037,
@@ -2688,7 +2777,7 @@ export const questions: Question[] = [
     ],
     correctAnswer: 0,
     comment:
-      "Ese tipo de aviso suele encontrarse en parques y otras zonas de recreo ajardinadas.",
+      "Ese tipo de aviso es habitual en parques y zonas ajardinadas de uso público, como medida de cuidado y conservación de los espacios verdes municipales.",
   },
   {
     id: 5038,
@@ -2700,7 +2789,8 @@ export const questions: Question[] = [
       "es la enseñanza a alumnos de 14 a 16 años.",
     ],
     correctAnswer: 1,
-    comment: "El Bachillerato se compone de dos cursos académicos.",
+    comment:
+      "El Bachillerato, que no es obligatorio pero sí necesario para acceder a la universidad, se compone de dos cursos académicos, generalmente entre los 16 y los 18 años.",
   },
   {
     id: 5039,
@@ -2712,7 +2802,8 @@ export const questions: Question[] = [
       "Impuestos sobre sociedades.",
     ],
     correctAnswer: 0,
-    comment: "El IVA es un impuesto indirecto que grava el consumo.",
+    comment:
+      "El IVA es un impuesto indirecto que grava el consumo de bienes y servicios, y se aplica de forma general a la mayoría de las transacciones comerciales en España.",
   },
   {
     id: 5040,
@@ -2726,7 +2817,7 @@ export const questions: Question[] = [
     ],
     correctAnswer: 0,
     comment:
-      "Al iniciar la vida laboral se asigna un número de afiliación a la Seguridad Social.",
+      "Al iniciar la vida laboral se asigna un número de afiliación a la Seguridad Social, que identifica al trabajador durante toda su vida laboral a efectos de cotización y prestaciones.",
   },
   {
     id: 5041,
@@ -2738,7 +2829,8 @@ export const questions: Question[] = [
       "son gratuitos.",
     ],
     correctAnswer: 2,
-    comment: "Los colegios públicos son gratuitos para las familias.",
+    comment:
+      "Los colegios públicos son gratuitos para las familias, ya que están financiados íntegramente con fondos públicos, a diferencia de los colegios privados o concertados.",
   },
   {
     id: 5042,
@@ -2747,7 +2839,7 @@ export const questions: Question[] = [
     options: ["Tenerife.", "Alicante.", "Algeciras."],
     correctAnswer: 2,
     comment:
-      "El puerto de Algeciras es uno de los principales puertos de España.",
+      "El puerto de Algeciras es uno de los principales de España y de Europa por volumen de tráfico de mercancías, gracias a su posición estratégica junto al estrecho de Gibraltar.",
   },
   {
     id: 5043,
@@ -2760,7 +2852,7 @@ export const questions: Question[] = [
     ],
     correctAnswer: 0,
     comment:
-      "Los colegios concertados son centros privados que reciben financiación pública.",
+      "Los colegios concertados son centros de titularidad privada que reciben financiación pública a cambio de cumplir determinados requisitos, entre ellos ofrecer plazas gratuitas o a bajo coste.",
   },
   {
     id: 5044,
@@ -2773,7 +2865,7 @@ export const questions: Question[] = [
     ],
     correctAnswer: 1,
     comment:
-      "La Unión Europea es el principal destino de las exportaciones españolas.",
+      "La Unión Europea, y en particular países como Francia y Alemania, son el principal destino de las exportaciones españolas, dada la fuerte integración comercial dentro del mercado único europeo.",
   },
   {
     id: 5045,
@@ -2782,7 +2874,7 @@ export const questions: Question[] = [
     options: ["todos.", "los parados.", "los niños."],
     correctAnswer: 0,
     comment:
-      "Las bibliotecas públicas son de acceso gratuito para toda la ciudadanía.",
+      "Las bibliotecas públicas en España son de acceso y uso gratuito para toda la ciudadanía, sin distinción de edad, nacionalidad o situación laboral.",
   },
   {
     id: 5046,
@@ -2790,7 +2882,8 @@ export const questions: Question[] = [
     question: "¿Cuál de estos productos exporta España más que importa?",
     options: ["Gas.", "Ropa.", "Calzado."],
     correctAnswer: 2,
-    comment: "España es un importante exportador de calzado.",
+    comment:
+      "España es un importante exportador neto de calzado, sector con fuerte tradición industrial en zonas como Elda o Elche (Alicante), a diferencia del gas, que el país importa mayoritariamente.",
   },
   {
     id: 5047,
@@ -2804,7 +2897,7 @@ export const questions: Question[] = [
     ],
     correctAnswer: 0,
     comment:
-      "Los Centros de Educación de Personas Adultas permiten obtener el graduado en ESO siendo mayor de edad.",
+      "Los Centros de Educación de Personas Adultas (CEPA) ofrecen programas flexibles para que quienes ya son mayores de edad puedan obtener el título de Graduado en ESO que no completaron en su momento.",
   },
   {
     id: 5048,
@@ -2817,7 +2910,7 @@ export const questions: Question[] = [
     ],
     correctAnswer: 1,
     comment:
-      "La Formación Profesional se divide en grado medio y grado superior.",
+      "La Formación Profesional se organiza en dos niveles, grado medio y grado superior, orientados a preparar a los estudiantes para el ejercicio directo de una profesión.",
   },
   {
     id: 5049,
@@ -2826,7 +2919,7 @@ export const questions: Question[] = [
     options: ["Al hospital.", "Al centro de salud.", "A la farmacia."],
     correctAnswer: 1,
     comment:
-      "El médico de familia y el pediatra atienden en el centro de salud.",
+      "El médico de familia y el pediatra atienden en el centro de salud (atención primaria), primer nivel de contacto con el sistema sanitario antes de derivar, si es necesario, a un hospital.",
   },
   {
     id: 5050,
@@ -2834,7 +2927,8 @@ export const questions: Question[] = [
     question: "¿Para cuántos años vale la tarjeta sanitaria europea?",
     options: ["Para un año.", "Para dos años.", "Para 10 años."],
     correctAnswer: 1,
-    comment: "La tarjeta sanitaria europea tiene una validez de dos años.",
+    comment:
+      "La Tarjeta Sanitaria Europea tiene una validez de dos años y permite recibir asistencia sanitaria pública en cualquier país de la Unión Europea, el Espacio Económico Europeo o Suiza durante una estancia temporal.",
   },
   {
     id: 5051,
@@ -2843,7 +2937,7 @@ export const questions: Question[] = [
     options: ["A las 18 h.", "A las 23 h.", "A las 21 o 22 h."],
     correctAnswer: 2,
     comment:
-      "En España se suele cenar bastante tarde, entre las 21 y las 22 horas.",
+      "En España se suele cenar bastante más tarde que en la mayoría de países europeos, generalmente entre las 21 y las 22 horas, una costumbre relacionada con los horarios laborales y el clima.",
   },
   {
     id: 5052,
@@ -2851,7 +2945,8 @@ export const questions: Question[] = [
     question: "¿Cuál es el número de teléfono único para cualquier emergencia?",
     options: ["060.", "112.", "911."],
     correctAnswer: 1,
-    comment: "El 112 es el número único de emergencias en España.",
+    comment:
+      "El 112 es el número único europeo de emergencias, válido en toda España y en el resto de la Unión Europea, que da acceso a los servicios de policía, bomberos y sanitarios.",
   },
   {
     id: 5053,
@@ -2859,7 +2954,8 @@ export const questions: Question[] = [
     question: "¿Cuál de estos periódicos se publica a nivel nacional?",
     options: ["El Diario Vasco.", "El País.", "La Voz de Galicia."],
     correctAnswer: 1,
-    comment: "El País es un periódico de difusión nacional.",
+    comment:
+      "El País es uno de los periódicos generalistas de mayor difusión a nivel nacional, mientras que El Diario Vasco y La Voz de Galicia son cabeceras de referencia en sus respectivas comunidades autónomas.",
   },
   {
     id: 5054,
@@ -2868,7 +2964,7 @@ export const questions: Question[] = [
     options: ["En el quiosco.", "En la farmacia.", "En el estanco."],
     correctAnswer: 2,
     comment:
-      "El estanco es el establecimiento donde se venden sellos y tabaco.",
+      "El estanco es el establecimiento autorizado para la venta de tabaco, sellos de correos y otros efectos timbrados, bajo un sistema de licencia administrativa regulado por el Estado.",
   },
   {
     id: 5055,
@@ -2882,7 +2978,7 @@ export const questions: Question[] = [
     ],
     correctAnswer: 0,
     comment:
-      "El teléfono de atención a víctimas de violencia de género funciona las 24 horas del día.",
+      "El teléfono de atención a víctimas de violencia de género funciona ininterrumpidamente las 24 horas del día, los 365 días del año, con atención gratuita y confidencial.",
   },
   {
     id: 5056,
@@ -2892,7 +2988,7 @@ export const questions: Question[] = [
     options: ["la ONCE.", "Unicef.", "Cáritas."],
     correctAnswer: 0,
     comment:
-      "La ONCE trabaja por la integración de las personas con discapacidad visual.",
+      "La ONCE (Organización Nacional de Ciegos Españoles), conocida también por su famoso sorteo del «cupón», trabaja por la integración social y laboral de las personas con discapacidad visual.",
   },
   {
     id: 5057,
@@ -2904,7 +3000,8 @@ export const questions: Question[] = [
       "una ruta para excursionistas.",
     ],
     correctAnswer: 0,
-    comment: "El Camino de Santiago está declarado Patrimonio de la Humanidad.",
+    comment:
+      "El Camino de Santiago, red de rutas de peregrinación que confluyen en Santiago de Compostela, está declarado Patrimonio de la Humanidad por la Unesco y recibe cada año a cientos de miles de peregrinos.",
   },
   {
     id: 5058,
@@ -2914,7 +3011,7 @@ export const questions: Question[] = [
     options: ["Teledeporte.", "La 1.", "Canal 24 horas."],
     correctAnswer: 2,
     comment:
-      "El Canal 24 Horas de RTVE emite noticias de actualidad de forma continua.",
+      "El Canal 24 Horas de RTVE es un canal público especializado en información continua, dedicado a la actualidad nacional e internacional durante todo el día.",
   },
   {
     id: 5059,
@@ -2924,7 +3021,7 @@ export const questions: Question[] = [
     options: ["091.", "112.", "016."],
     correctAnswer: 2,
     comment:
-      "El 016 es el teléfono gratuito de atención a víctimas de violencia de género.",
+      "El 016 es el teléfono gratuito y confidencial de información y asesoramiento jurídico para las víctimas de violencia de género; la llamada no queda registrada en la factura del teléfono.",
   },
   {
     id: 5060,
@@ -2934,7 +3031,7 @@ export const questions: Question[] = [
     options: ["de cercanías.", "rural.", "transnacional."],
     correctAnswer: 0,
     comment:
-      "La red ferroviaria española incluye trenes de larga distancia, media distancia y cercanías.",
+      "La red ferroviaria española se organiza en servicios de larga distancia (AVE y trenes de alta velocidad), media distancia y cercanías, estos últimos pensados para el trayecto diario dentro de las grandes áreas metropolitanas.",
   },
   {
     id: 5061,
@@ -2947,7 +3044,7 @@ export const questions: Question[] = [
     ],
     correctAnswer: 0,
     comment:
-      "Fumar está prohibido en las inmediaciones de los centros escolares.",
+      "Fumar está prohibido en el entorno inmediato de los centros escolares, dentro de las medidas de protección de la salud de los menores establecidas por la normativa antitabaco.",
   },
   {
     id: 5062,
@@ -2957,7 +3054,7 @@ export const questions: Question[] = [
     options: ["Bachiller.", "Técnico.", "Graduado en ESO."],
     correctAnswer: 1,
     comment:
-      "Al finalizar un ciclo formativo de grado medio se obtiene el título de Técnico.",
+      "Al finalizar un ciclo formativo de grado medio de Formación Profesional se obtiene el título de Técnico en la especialidad correspondiente, que habilita para el ejercicio profesional directo.",
   },
   {
     id: 5063,
@@ -2966,7 +3063,8 @@ export const questions: Question[] = [
       "¿Qué título se obtiene tras realizar una tesis doctoral en España?",
     options: ["Máster.", "Graduado.", "Doctor."],
     correctAnswer: 2,
-    comment: "Tras defender una tesis doctoral se obtiene el título de Doctor.",
+    comment:
+      "Tras defender públicamente una tesis doctoral ante un tribunal universitario se obtiene el título de Doctor, el grado académico más alto dentro del sistema universitario español.",
   },
   {
     id: 5064,
@@ -2974,7 +3072,8 @@ export const questions: Question[] = [
     question: "¿Dónde se compran las medicinas con receta?",
     options: ["En el hospital.", "En el centro de salud.", "En la farmacia."],
     correctAnswer: 2,
-    comment: "Los medicamentos con receta se dispensan en las farmacias.",
+    comment:
+      "Los medicamentos con receta se dispensan exclusivamente en las farmacias, establecimientos regulados que garantizan el correcto suministro y control de fármacos.",
   },
   {
     id: 5065,
@@ -2988,7 +3087,7 @@ export const questions: Question[] = [
     ],
     correctAnswer: 0,
     comment:
-      "No pisar el césped es una indicación habitual en parques públicos.",
+      "«No pisar el césped» es una indicación habitual en parques y jardines públicos, orientada a conservar las zonas verdes; las otras dos opciones corresponden más bien a transporte público.",
   },
   {
     id: 5066,
@@ -2998,7 +3097,7 @@ export const questions: Question[] = [
     options: ["El garaje.", "El seguro.", "La alarma."],
     correctAnswer: 1,
     comment:
-      "El seguro del vehículo es obligatorio para todos los propietarios de coches en España.",
+      "El seguro de responsabilidad civil del vehículo es obligatorio por ley para todos los propietarios de coches en España, con el fin de cubrir los daños que puedan causarse a terceros.",
   },
   {
     id: 5067,
@@ -3006,7 +3105,8 @@ export const questions: Question[] = [
     question: "El aeropuerto Adolfo Suárez está en…",
     options: ["Barcelona.", "Madrid.", "Bilbao."],
     correctAnswer: 1,
-    comment: "El aeropuerto Adolfo Suárez Madrid-Barajas está en Madrid.",
+    comment:
+      "El aeropuerto Adolfo Suárez Madrid-Barajas, el más grande y con mayor tráfico de pasajeros de España, debe su nombre al primer presidente del Gobierno de la democracia.",
   },
   {
     id: 5068,
@@ -3019,7 +3119,7 @@ export const questions: Question[] = [
     ],
     correctAnswer: 2,
     comment:
-      "El cinturón de seguridad es obligatorio en todos los asientos del vehículo.",
+      "El uso del cinturón de seguridad es obligatorio para todos los ocupantes del vehículo, tanto en los asientos delanteros como en los traseros, siempre que el vehículo disponga de ellos.",
   },
   {
     id: 5069,
@@ -3027,7 +3127,8 @@ export const questions: Question[] = [
     question: "¿Cuál es el límite de velocidad en autopista?",
     options: ["90 km/h.", "120 km/h.", "150 km/h."],
     correctAnswer: 1,
-    comment: "El límite general de velocidad en autopista es de 120 km/h.",
+    comment:
+      "El límite general de velocidad en autopistas y autovías españolas es de 120 km/h, salvo señalización específica que indique otro límite en un tramo concreto.",
   },
   {
     id: 5070,
@@ -3037,7 +3138,7 @@ export const questions: Question[] = [
     options: ["el transporte público.", "las bibliotecas.", "los museos."],
     correctAnswer: 0,
     comment:
-      "Ceder el asiento a personas con movilidad reducida es una norma habitual del transporte público.",
+      "Ceder el asiento a personas mayores, embarazadas o con movilidad reducida es una norma de cortesía y, en muchos casos, de obligado cumplimiento en autobuses, metro y otros medios de transporte público.",
   },
   {
     id: 5071,
@@ -3046,7 +3147,8 @@ export const questions: Question[] = [
       "¿Cuál es el medio de transporte público que tiene una luz verde encendida si está libre?",
     options: ["El autobús.", "El taxi.", "El tranvía."],
     correctAnswer: 1,
-    comment: "El taxi lleva encendida una luz verde cuando está libre.",
+    comment:
+      "El taxi lleva encendida una luz verde en el techo cuando está libre y disponible para recoger pasajeros; cuando está ocupado, esa luz se apaga.",
   },
   {
     id: 5072,
@@ -3059,7 +3161,7 @@ export const questions: Question[] = [
     ],
     correctAnswer: 1,
     comment:
-      "Los perros deben llevar microchip identificativo y estar vacunados.",
+      "Es obligatorio identificar a los perros mediante microchip, mantener al día su cartilla de vacunación e inscribirlos en el registro municipal correspondiente, además de recoger sus excrementos en la vía pública.",
   },
   {
     id: 5073,
@@ -3068,7 +3170,7 @@ export const questions: Question[] = [
     options: ["Italia.", "China.", "Alemania."],
     correctAnswer: 1,
     comment:
-      "China exige pasaporte a los ciudadanos españoles para entrar en su territorio.",
+      "Al no formar parte de la Unión Europea ni del espacio Schengen, China exige pasaporte (y en muchos casos visado) a los ciudadanos españoles para entrar en su territorio, a diferencia de Italia o Alemania.",
   },
   {
     id: 5074,
@@ -3076,7 +3178,8 @@ export const questions: Question[] = [
     question: "¿Cuál es la edad mínima para trabajar en España?",
     options: ["16 años.", "18 años.", "21 años."],
     correctAnswer: 0,
-    comment: "La edad mínima general para trabajar en España es 16 años.",
+    comment:
+      "La edad mínima general para trabajar en España es 16 años, siempre que se haya completado la enseñanza obligatoria; para determinados trabajos nocturnos o peligrosos se exige, además, ser mayor de 18.",
   },
   {
     id: 5075,
@@ -3085,7 +3188,7 @@ export const questions: Question[] = [
     options: ["Agricultura.", "Servicios.", "Construcción."],
     correctAnswer: 1,
     comment:
-      "El sector servicios es el que más peso tiene en la economía española.",
+      "El sector servicios, que incluye el turismo, el comercio y las finanzas entre otros, es con diferencia el que más aporta al PIB y al empleo en la economía española.",
   },
   {
     id: 5076,
@@ -3098,7 +3201,7 @@ export const questions: Question[] = [
     ],
     correctAnswer: 1,
     comment:
-      "España es un país puntero en energías renovables, como la eólica y la solar.",
+      "España es uno de los países líderes en energías renovables, especialmente en energía eólica y solar, gracias a sus recursos naturales y a la inversión en tecnología limpia de las últimas décadas.",
   },
   {
     id: 5077,
@@ -3111,7 +3214,7 @@ export const questions: Question[] = [
     ],
     correctAnswer: 1,
     comment:
-      "El Estatuto de los Trabajadores es la principal norma laboral española.",
+      "El Estatuto de los Trabajadores es la norma básica que regula las relaciones laborales en España: derechos y deberes de trabajadores y empresas, contratos, jornada, salario y despido, entre otros aspectos.",
   },
   {
     id: 5078,
@@ -3121,7 +3224,7 @@ export const questions: Question[] = [
     options: ["Farmacia.", "Pescadería.", "Librería."],
     correctAnswer: 0,
     comment:
-      "Las farmacias de guardia pueden permanecer abiertas las 24 horas cuando es necesario.",
+      "Las farmacias organizan un sistema de guardias rotatorio que garantiza que siempre haya al menos una abierta las 24 horas en cada zona, para atender urgencias sanitarias fuera del horario habitual.",
   },
   {
     id: 5079,
@@ -3130,7 +3233,7 @@ export const questions: Question[] = [
     options: ["es obligatoria.", "tiene dos ciclos.", "empieza a los 4 años."],
     correctAnswer: 1,
     comment:
-      "La educación infantil en España se organiza en dos ciclos (0-3 y 3-6 años).",
+      "La educación infantil, aunque no es obligatoria, se organiza en dos ciclos (de 0 a 3 años y de 3 a 6 años) y es una etapa clave en el desarrollo temprano de los menores.",
   },
   {
     id: 5080,
@@ -3138,7 +3241,8 @@ export const questions: Question[] = [
     question: "¿Cuándo empieza el calendario escolar?",
     options: ["En agosto.", "En septiembre.", "En octubre."],
     correctAnswer: 1,
-    comment: "El curso escolar comienza habitualmente en septiembre.",
+    comment:
+      "El curso escolar en España comienza habitualmente en septiembre y finaliza en junio, aunque las fechas exactas varían ligeramente según la comunidad autónoma.",
   },
   {
     id: 5081,
@@ -3151,7 +3255,7 @@ export const questions: Question[] = [
     ],
     correctAnswer: 1,
     comment:
-      "Las Escuelas Oficiales de Idiomas admiten alumnos a partir de los 16 años.",
+      "Las Escuelas Oficiales de Idiomas (EOI) son centros públicos de enseñanza de idiomas a los que pueden acceder los mayores de 16 años, ofreciendo formación y titulación oficial en numerosas lenguas.",
   },
   {
     id: 5082,
@@ -3165,7 +3269,7 @@ export const questions: Question[] = [
     ],
     correctAnswer: 0,
     comment:
-      "El informe de vida laboral recoge los periodos cotizados a la Seguridad Social.",
+      "El informe de vida laboral recoge de forma detallada los periodos y las empresas en las que una persona ha cotizado a la Seguridad Social a lo largo de su trayectoria profesional; puede solicitarse online de forma gratuita.",
   },
   {
     id: 5083,
@@ -3179,7 +3283,7 @@ export const questions: Question[] = [
     ],
     correctAnswer: 0,
     comment:
-      "Los convenios colectivos regulan las condiciones laborales pactadas con los representantes de los trabajadores.",
+      "Los convenios colectivos son acuerdos negociados entre empresarios (o sus asociaciones) y los representantes de los trabajadores que regulan las condiciones laborales, como salarios, jornada o vacaciones, aplicables a un sector o empresa.",
   },
   {
     id: 5084,
@@ -3191,6 +3295,7 @@ export const questions: Question[] = [
       "En tecnología digital.",
     ],
     correctAnswer: 0,
-    comment: "España destaca internacionalmente en el sector del turismo.",
+    comment:
+      "España es una de las principales potencias turísticas del mundo, situándose habitualmente entre los países que más visitantes internacionales reciben cada año.",
   },
 ];
