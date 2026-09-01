@@ -10,7 +10,25 @@ import "../styles/global.css";
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CCSE Practice App</title>
+    <title>CCSE Práctica Examen</title>
+    <style>
+      @keyframes streak-pop {
+        0% {
+          transform: scale(0) rotate(0deg);
+          opacity: 0;
+        }
+        60% {
+          transform: scale(1.15) rotate(var(--tilt, 0deg));
+          opacity: 1;
+        }
+        100% {
+          transform: scale(1) rotate(var(--tilt, 0deg));
+        }
+      }
+      .streak-pan {
+        animation: streak-pop 0.35s ease-out;
+      }
+    </style>
   </head>
   <body
     class="bg-slate-100 dark:bg-zinc-950 text-slate-900 dark:text-zinc-100 min-h-screen flex flex-col items-center justify-center p-4 transition-colors duration-200"
@@ -45,13 +63,13 @@ import "../styles/global.css";
             >
               <path
                 d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38
-          0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13
-          -.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66
-          .07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15
-          -.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27
-          .68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12
-          .51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48
-          0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+            0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13
+            -.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66
+            .07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15
+            -.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27
+            .68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12
+            .51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48
+            0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"
               ></path>
             </svg>
             <span>GitHub</span>
@@ -163,6 +181,15 @@ import "../styles/global.css";
                   ></span
                 >
               </div>
+              <div class="flex justify-center">
+                <span
+                  >🔥 Mejor racha: <strong
+                    id="stat-practice-best-streak"
+                    class="text-slate-900 dark:text-zinc-100 font-bold"
+                    >0</strong
+                  ></span
+                >
+              </div>
             </div>
             <a
               href="https://github.com/tu-usuario/tu-repo"
@@ -192,6 +219,22 @@ import "../styles/global.css";
             >
           </header>
 
+          <div
+            id="streak-zone"
+            class="hidden items-center justify-end gap-1 -mt-1"
+          >
+            <div
+              id="streak-stack"
+              class="flex flex-wrap-reverse content-end justify-end gap-0.5"
+            >
+            </div>
+            <p
+              id="streak-label"
+              class="text-xs font-black uppercase tracking-wider text-[#C60B1E] dark:text-[#FFC400]"
+            >
+            </p>
+          </div>
+
           <div class="space-y-4">
             <h2
               id="quiz-question"
@@ -199,6 +242,11 @@ import "../styles/global.css";
             >
             </h2>
             <div id="quiz-options" class="grid gap-2.5"></div>
+            <div
+              id="quiz-comment"
+              class="hidden text-sm font-medium leading-relaxed bg-slate-50 dark:bg-zinc-800/60 border border-slate-300 dark:border-zinc-700 px-4 py-3 text-slate-700 dark:text-zinc-300"
+            >
+            </div>
           </div>
 
           <div
@@ -252,6 +300,8 @@ import "../styles/global.css";
       let selectedOption = null;
       let isPracticeMode = false;
       let answeredInSession = 0;
+      let streak = 0;
+      let bestStreakThisSession = 0;
 
       // Theme logic
       const themeToggleBtn = document.getElementById("theme-toggle");
@@ -281,6 +331,7 @@ import "../styles/global.css";
       });
 
       // DOM Elements
+      const quizComment = document.getElementById("quiz-comment");
       const menuView = document.getElementById("menu-view");
       const quizView = document.getElementById("quiz-view");
       const resultsView = document.getElementById("results-view");
@@ -297,6 +348,12 @@ import "../styles/global.css";
         "stat-practice-completed",
       );
       const statPracticeBest = document.getElementById("stat-practice-best");
+      const statPracticeBestStreak = document.getElementById(
+        "stat-practice-best-streak",
+      );
+      const streakZone = document.getElementById("streak-zone");
+      const streakStack = document.getElementById("streak-stack");
+      const streakLabel = document.getElementById("streak-label");
 
       // LocalStorage Helpers
       function loadStats() {
@@ -335,10 +392,11 @@ import "../styles/global.css";
         try {
           const stats = JSON.parse(
             localStorage.getItem("ccse_practice_stats") ||
-              '{"completed": 0, "best": "N/A"}',
+              '{"completed": 0, "best": "N/A", "bestStreak": 0}',
           );
           statPracticeCompleted.textContent = stats.completed;
           statPracticeBest.textContent = stats.best;
+          statPracticeBestStreak.textContent = stats.bestStreak || 0;
         } catch (err) {
           console.error(
             "No se pudieron cargar las estadísticas de práctica:",
@@ -346,14 +404,15 @@ import "../styles/global.css";
           );
           statPracticeCompleted.textContent = "0";
           statPracticeBest.textContent = "N/A";
+          statPracticeBestStreak.textContent = "0";
         }
       }
 
-      function savePracticeStats(correct, total) {
+      function savePracticeStats(correct, total, sessionBestStreak = 0) {
         try {
           const stats = JSON.parse(
             localStorage.getItem("ccse_practice_stats") ||
-              '{"completed": 0, "best": "N/A"}',
+              '{"completed": 0, "best": "N/A", "bestStreak": 0}',
           );
           stats.completed += 1;
 
@@ -367,6 +426,10 @@ import "../styles/global.css";
 
           if (accuracy > prevBestAccuracy) {
             stats.best = `${correct}/${total}`;
+          }
+
+          if (sessionBestStreak > (stats.bestStreak || 0)) {
+            stats.bestStreak = sessionBestStreak;
           }
 
           localStorage.setItem("ccse_practice_stats", JSON.stringify(stats));
@@ -389,12 +452,23 @@ import "../styles/global.css";
         currentIndex = 0;
         score = 0;
         answeredInSession = 0;
+        streak = 0;
+        bestStreakThisSession = 0;
         isPracticeMode = practiceMode;
         quizCategory.textContent = categoryName;
 
         menuView.classList.add("hidden");
         resultsView.classList.add("hidden");
         quizView.classList.remove("hidden");
+
+        if (isPracticeMode) {
+          streakZone.classList.remove("hidden");
+          streakZone.classList.add("flex");
+        } else {
+          streakZone.classList.add("hidden");
+          streakZone.classList.remove("flex");
+        }
+        renderStreak();
 
         renderQuestion();
       }
@@ -430,6 +504,8 @@ import "../styles/global.css";
       function renderQuestion() {
         selectedOption = null;
         btnNext.classList.add("hidden");
+        quizComment.classList.add("hidden");
+        quizComment.textContent = "";
         const q = activeQuestions[currentIndex];
 
         quizProgress.textContent = isPracticeMode
@@ -448,6 +524,34 @@ import "../styles/global.css";
         });
       }
 
+      function renderStreak() {
+        streakStack.innerHTML = "";
+
+        const maxVisible = 12;
+        const visibleCount = Math.min(streak, maxVisible);
+
+        for (let i = 0; i < visibleCount; i++) {
+          const pan = document.createElement("div");
+          pan.textContent = "🥘";
+          pan.className =
+            "streak-pan text-xl leading-none drop-shadow-md w-6 h-6 flex items-center justify-center shrink-0";
+          streakStack.appendChild(pan);
+        }
+
+        if (streak > maxVisible) {
+          const badge = document.createElement("div");
+          badge.textContent = `+${streak - maxVisible}`;
+          badge.className =
+            "streak-pan text-xs font-black text-[#C60B1E] dark:text-[#FFC400] flex items-center";
+          streakStack.appendChild(badge);
+        }
+
+        streakLabel.textContent =
+          streak > 0
+            ? `🔥 Racha: ${streak}`
+            : "Responde bien para empezar la racha";
+      }
+
       function selectOption(idx) {
         if (selectedOption !== null) return;
         selectedOption = idx;
@@ -459,11 +563,11 @@ import "../styles/global.css";
           btn.disabled = true;
           if (i === q.correctAnswer) {
             btn.classList.add(
-              "bg-green-300!",
+              "bg-green-400!",
               "dark:bg-emerald-950/80",
               "border-emerald-600",
               "dark:border-emerald-500",
-              "text-emerald-900",
+              "text-emerald-900!",
               "dark:text-emerald-200",
             );
             btn.querySelector(".status-icon").textContent = "✓";
@@ -480,8 +584,24 @@ import "../styles/global.css";
           }
         });
 
+        if (q.comment) {
+          quizComment.textContent = q.comment;
+          quizComment.classList.remove("hidden");
+        }
+
         answeredInSession++;
-        if (idx === q.correctAnswer) score++;
+        if (idx === q.correctAnswer) {
+          score++;
+          if (isPracticeMode) {
+            streak++;
+            if (streak > bestStreakThisSession) bestStreakThisSession = streak;
+          }
+        } else if (isPracticeMode) {
+          streak = 0;
+        }
+
+        if (isPracticeMode) renderStreak();
+
         btnNext.classList.remove("hidden");
       }
 
@@ -509,11 +629,11 @@ import "../styles/global.css";
           `${score} / ${answeredInSession}`;
         document.getElementById("results-feedback").textContent =
           answeredInSession > 0
-            ? "Sesión libre finalizada. Sin límite de aprobado/suspenso."
+            ? `Sesión libre finalizada. Mejor racha: ${bestStreakThisSession} 🔥`
             : "Saliste sin responder ninguna pregunta.";
 
         if (answeredInSession > 0) {
-          savePracticeStats(score, answeredInSession);
+          savePracticeStats(score, answeredInSession, bestStreakThisSession);
         }
       }
 
