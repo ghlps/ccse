@@ -97,16 +97,10 @@ import "../styles/global.css";
               Simulacro Oficial (25 Preguntas)
             </button>
             <button
-              id="btn-full"
-              class="w-full cursor-pointer py-3.5 px-4 bg-[#FFC400] hover:bg-[#e0ac00] text-slate-950 font-bold rounded-none transition shadow-sm border border-[#FFC400]"
+              id="btn-practice"
+              class="w-full cursor-pointer py-3.5 px-4 bg-transparent hover:bg-slate-100 dark:hover:bg-zinc-800 text-slate-700 dark:text-zinc-300 font-bold rounded-none transition border-2 border-dashed border-slate-400 dark:border-zinc-600"
             >
-              Responder Todas (300 Preguntas)
-            </button>
-            <button
-              id="btn-random"
-              class="w-full cursor-pointer py-3.5 px-4 bg-slate-200 dark:bg-zinc-800 hover:bg-slate-300 dark:hover:bg-zinc-700 text-slate-900 dark:text-zinc-100 font-bold rounded-none transition shadow-sm border border-slate-300 dark:border-zinc-700"
-            >
-              25 Preguntas Aleatorias
+              Modo Libre (Sin Límite)
             </button>
           </div>
 
@@ -136,20 +130,39 @@ import "../styles/global.css";
           <div
             class="mt-6 pt-4 border-t border-slate-200 dark:border-zinc-800 flex flex-col gap-2 text-xs text-slate-500 dark:text-zinc-400 font-medium"
           >
-            <div class="flex justify-between">
-              <span
-                >Tests completados: <strong
-                  id="stat-completed"
-                  class="text-slate-900 dark:text-zinc-100 font-bold">0</strong
-                ></span
-              >
-              <span
-                >Último resultado: <strong
-                  id="stat-last-score"
-                  class="text-slate-900 dark:text-zinc-100 font-bold"
-                  >N/A</strong
-                ></span
-              >
+            <div class="flex flex-col gap-1">
+              <div class="flex justify-between">
+                <span
+                  >Tests completados: <strong
+                    id="stat-completed"
+                    class="text-slate-900 dark:text-zinc-100 font-bold"
+                    >0</strong
+                  ></span
+                >
+                <span
+                  >Último resultado: <strong
+                    id="stat-last-score"
+                    class="text-slate-900 dark:text-zinc-100 font-bold"
+                    >N/A</strong
+                  ></span
+                >
+              </div>
+              <div class="flex justify-between">
+                <span
+                  >Prácticas libres: <strong
+                    id="stat-practice-completed"
+                    class="text-slate-900 dark:text-zinc-100 font-bold"
+                    >0</strong
+                  ></span
+                >
+                <span
+                  >Mejor sesión: <strong
+                    id="stat-practice-best"
+                    class="text-slate-900 dark:text-zinc-100 font-bold"
+                    >N/A</strong
+                  ></span
+                >
+              </div>
             </div>
             <a
               href="https://github.com/tu-usuario/tu-repo"
@@ -237,6 +250,8 @@ import "../styles/global.css";
       let currentIndex = 0;
       let score = 0;
       let selectedOption = null;
+      let isPracticeMode = false;
+      let answeredInSession = 0;
 
       // Theme logic
       const themeToggleBtn = document.getElementById("theme-toggle");
@@ -270,9 +285,7 @@ import "../styles/global.css";
       const quizView = document.getElementById("quiz-view");
       const resultsView = document.getElementById("results-view");
 
-      const quizCategory =
-        document.getElementById("quiz-[#C60B1E]") ||
-        document.getElementById("quiz-category");
+      const quizCategory = document.getElementById("quiz-category");
       const quizProgress = document.getElementById("quiz-progress");
       const quizQuestion = document.getElementById("quiz-question");
       const quizOptions = document.getElementById("quiz-options");
@@ -280,35 +293,103 @@ import "../styles/global.css";
 
       const statCompleted = document.getElementById("stat-completed");
       const statLastScore = document.getElementById("stat-last-score");
+      const statPracticeCompleted = document.getElementById(
+        "stat-practice-completed",
+      );
+      const statPracticeBest = document.getElementById("stat-practice-best");
 
-      // LocalStorage Helper
+      // LocalStorage Helpers
       function loadStats() {
-        const stats = JSON.parse(
-          localStorage.getItem("ccse_stats") ||
-            '{"completed": 0, "lastScore": "N/A"}',
-        );
-        statCompleted.textContent = stats.completed;
-        statLastScore.textContent = stats.lastScore;
+        try {
+          const stats = JSON.parse(
+            localStorage.getItem("ccse_stats") ||
+              '{"completed": 0, "lastScore": "N/A"}',
+          );
+          statCompleted.textContent = stats.completed;
+          statLastScore.textContent = stats.lastScore;
+        } catch (err) {
+          console.error("No se pudieron cargar las estadísticas:", err);
+          statCompleted.textContent = "0";
+          statLastScore.textContent = "N/A";
+        }
       }
 
       function saveStats(correct, total) {
-        const stats = JSON.parse(
-          localStorage.getItem("ccse_stats") ||
-            '{"completed": 0, "lastScore": "N/A"}',
-        );
-        stats.completed += 1;
-        const passed = total === 25 ? correct >= 15 : correct / total >= 0.6;
-        const statusText = passed ? "APROBADO" : "NO APTO";
-        stats.lastScore = `${correct}/${total} (${statusText})`;
-        localStorage.setItem("ccse_stats", JSON.stringify(stats));
+        try {
+          const stats = JSON.parse(
+            localStorage.getItem("ccse_stats") ||
+              '{"completed": 0, "lastScore": "N/A"}',
+          );
+          stats.completed += 1;
+          const passed = correct >= 15;
+          const statusText = passed ? "APROBADO" : "NO APTO";
+          stats.lastScore = `${correct}/${total} (${statusText})`;
+          localStorage.setItem("ccse_stats", JSON.stringify(stats));
+        } catch (err) {
+          console.error("No se pudieron guardar las estadísticas:", err);
+        }
         loadStats();
       }
 
+      function loadPracticeStats() {
+        try {
+          const stats = JSON.parse(
+            localStorage.getItem("ccse_practice_stats") ||
+              '{"completed": 0, "best": "N/A"}',
+          );
+          statPracticeCompleted.textContent = stats.completed;
+          statPracticeBest.textContent = stats.best;
+        } catch (err) {
+          console.error(
+            "No se pudieron cargar las estadísticas de práctica:",
+            err,
+          );
+          statPracticeCompleted.textContent = "0";
+          statPracticeBest.textContent = "N/A";
+        }
+      }
+
+      function savePracticeStats(correct, total) {
+        try {
+          const stats = JSON.parse(
+            localStorage.getItem("ccse_practice_stats") ||
+              '{"completed": 0, "best": "N/A"}',
+          );
+          stats.completed += 1;
+
+          const accuracy = total > 0 ? correct / total : 0;
+          const prevBestAccuracy = (() => {
+            if (stats.best === "N/A") return -1;
+            const match = /(\d+)\/(\d+)/.exec(stats.best);
+            if (!match) return -1;
+            return Number(match[1]) / Number(match[2]);
+          })();
+
+          if (accuracy > prevBestAccuracy) {
+            stats.best = `${correct}/${total}`;
+          }
+
+          localStorage.setItem("ccse_practice_stats", JSON.stringify(stats));
+        } catch (err) {
+          console.error(
+            "No se pudieron guardar las estadísticas de práctica:",
+            err,
+          );
+        }
+        loadPracticeStats();
+      }
+
       // Quiz Engine
-      function startQuiz(questionsList, categoryName) {
+      function shuffle(array) {
+        return [...array].sort(() => Math.random() - 0.5);
+      }
+
+      function startQuiz(questionsList, categoryName, practiceMode = false) {
         activeQuestions = questionsList;
         currentIndex = 0;
         score = 0;
+        answeredInSession = 0;
+        isPracticeMode = practiceMode;
         quizCategory.textContent = categoryName;
 
         menuView.classList.add("hidden");
@@ -319,9 +400,6 @@ import "../styles/global.css";
       }
 
       function generateOfficialExam() {
-        const shuffle = (array) => [...array].sort(() => Math.random() - 0.5);
-
-        // Agrupación por las 2 grandes áreas según las secciones de tu data
         const govKeywords = [
           "gobierno",
           "legislacion",
@@ -343,7 +421,6 @@ import "../styles/global.css";
           (q) => !isGovSection(q.section),
         );
 
-        // Selección proporcional: 15 de Gobierno y 10 de Cultura
         const selectedGov = shuffle(govQuestions).slice(0, 15);
         const selectedCulture = shuffle(cultureQuestions).slice(0, 10);
 
@@ -355,7 +432,9 @@ import "../styles/global.css";
         btnNext.classList.add("hidden");
         const q = activeQuestions[currentIndex];
 
-        quizProgress.textContent = `${currentIndex + 1}/${activeQuestions.length}`;
+        quizProgress.textContent = isPracticeMode
+          ? `Pregunta ${answeredInSession + 1}`
+          : `${currentIndex + 1}/${activeQuestions.length}`;
         quizQuestion.textContent = q.question;
         quizOptions.innerHTML = "";
 
@@ -401,6 +480,7 @@ import "../styles/global.css";
           }
         });
 
+        answeredInSession++;
         if (idx === q.correctAnswer) score++;
         btnNext.classList.remove("hidden");
       }
@@ -410,42 +490,47 @@ import "../styles/global.css";
         resultsView.classList.remove("hidden");
 
         const total = activeQuestions.length;
-        const isOfficial = total === 25;
-        const isPassed = isOfficial ? score >= 15 : score / total >= 0.6;
+        const isPassed = score >= 15;
 
         document.getElementById("results-summary").textContent =
           `${score} / ${total}`;
-
         document.getElementById("results-feedback").textContent = isPassed
-          ? `¡APTO! Has superado el test (mínimo requerido: ${isOfficial ? "15/25 aciertos" : "60%"}).`
-          : `NO APTO. Necesitas al menos ${isOfficial ? "15 aciertos sobre 25" : "un 60% de respuestas correctas"}.`;
+          ? "¡APTO! Has superado el test (mínimo requerido: 15/25 aciertos)."
+          : "NO APTO. Necesitas al menos 15 aciertos sobre 25.";
 
         saveStats(score, total);
       }
 
+      function showPracticeResults() {
+        quizView.classList.add("hidden");
+        resultsView.classList.remove("hidden");
+
+        document.getElementById("results-summary").textContent =
+          `${score} / ${answeredInSession}`;
+        document.getElementById("results-feedback").textContent =
+          answeredInSession > 0
+            ? "Sesión libre finalizada. Sin límite de aprobado/suspenso."
+            : "Saliste sin responder ninguna pregunta.";
+
+        if (answeredInSession > 0) {
+          savePracticeStats(score, answeredInSession);
+        }
+      }
+
       // Event Listeners
       document.getElementById("btn-official").onclick = () => {
-        const officialExam = generateOfficialExam();
-        startQuiz(officialExam, "Examen Oficial (25 preguntas)");
+        startQuiz(generateOfficialExam(), "Examen Oficial (25 preguntas)");
       };
 
-      document.getElementById("btn-full").onclick = () => {
-        startQuiz([...allQuestions], "Banco Completo (300 Preguntas)");
-      };
-
-      document.getElementById("btn-random").onclick = () => {
-        const shuffled = [...allQuestions]
-          .sort(() => Math.random() - 0.5)
-          .slice(0, 25);
-        startQuiz(shuffled, "25 Preguntas Aleatorias");
+      document.getElementById("btn-practice").onclick = () => {
+        startQuiz(shuffle(allQuestions), "Modo Libre", true);
       };
 
       document.querySelectorAll(".btn-section").forEach((btn) => {
         btn.onclick = () => {
           const sec = btn.getAttribute("data-section");
           const filtered = allQuestions.filter((q) => q.section === sec);
-          const shuffled = [...filtered].sort(() => Math.random() - 0.5);
-          startQuiz(shuffled, sec);
+          startQuiz(shuffle(filtered), sec);
         };
       });
 
@@ -453,22 +538,33 @@ import "../styles/global.css";
         currentIndex++;
         if (currentIndex < activeQuestions.length) {
           renderQuestion();
+        } else if (isPracticeMode) {
+          // Se acabó el mazo: rebaraja y sigue indefinidamente
+          activeQuestions = shuffle(allQuestions);
+          currentIndex = 0;
+          renderQuestion();
         } else {
           showResults();
         }
       };
 
       document.getElementById("btn-exit").onclick = () => {
+        if (isPracticeMode) {
+          showPracticeResults();
+          return;
+        }
         quizView.classList.add("hidden");
         menuView.classList.remove("hidden");
       };
 
       document.getElementById("btn-restart").onclick = () => {
+        isPracticeMode = false;
         resultsView.classList.add("hidden");
         menuView.classList.remove("hidden");
       };
 
       loadStats();
+      loadPracticeStats();
     </script>
   </body>
 </html>
