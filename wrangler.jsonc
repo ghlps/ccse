@@ -1,0 +1,16 @@
+{
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "my-thumbs-up-db",
+      "database_id": "12770463-9014-4e44-a910-a0318ddc119e",
+    },
+  ],
+  "kv_namespaces": [
+    {
+      "binding": "LIKES_RATE_LIMIT",
+      "id": "76d1478f34f54b118ba7acf85230e302",
+      "remote": true,
+    },
+  ],
+}

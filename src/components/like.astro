@@ -1,0 +1,33 @@
+<div class="like-container">
+  <button id="like-btn" type="button">
+    👍 <span id="like-count">0</span>
+  </button>
+</div>
+
+<script>
+  const pageId = window.location.pathname; // Differentiates counts per page URL
+  const button = document.getElementById("like-btn");
+  const countSpan = document.getElementById("like-count");
+
+  // Load current count on page load
+  async function loadLikes() {
+    const res = await fetch(`/api/like?pageId=${encodeURIComponent(pageId)}`);
+    const data = await res.json();
+    if (countSpan) countSpan.textContent = data.likes;
+  }
+
+  // Handle like button click
+  button?.addEventListener("click", async () => {
+    button.setAttribute("disabled", "true"); // Prevents double click spamming
+    const res = await fetch("/api/like", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ pageId }),
+    });
+    const data = await res.json();
+    if (countSpan) countSpan.textContent = data.likes;
+    button.removeAttribute("disabled");
+  });
+
+  loadLikes();
+</script>

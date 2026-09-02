@@ -12,11 +12,15 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/cloudflare": "^14.2.6",
     "@tailwindcss/vite": "^4.3.3",
     "astro": "^7.2.9",
     "tailwindcss": "^4.3.3"
   },
   "allowScripts": {
     "esbuild": true
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20260901.1"
   }
 }
