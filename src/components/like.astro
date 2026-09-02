@@ -5,27 +5,29 @@
 </div>
 
 <script>
-  const pageId = window.location.pathname; // Differentiates counts per page URL
+  interface LikeResponse {
+    likes: number;
+  }
+
+  const pageId = window.location.pathname;
   const button = document.getElementById("like-btn");
   const countSpan = document.getElementById("like-count");
 
-  // Load current count on page load
   async function loadLikes() {
     const res = await fetch(`/api/like?pageId=${encodeURIComponent(pageId)}`);
-    const data = await res.json();
-    if (countSpan) countSpan.textContent = data.likes;
+    const data = await res.json<LikeResponse>();
+    if (countSpan) countSpan.textContent = String(data.likes);
   }
 
-  // Handle like button click
   button?.addEventListener("click", async () => {
-    button.setAttribute("disabled", "true"); // Prevents double click spamming
+    button.setAttribute("disabled", "true");
     const res = await fetch("/api/like", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ pageId }),
     });
-    const data = await res.json();
-    if (countSpan) countSpan.textContent = data.likes;
+    const data = await res.json<LikeResponse>();
+    if (countSpan) countSpan.textContent = String(data.likes);
     button.removeAttribute("disabled");
   });
 

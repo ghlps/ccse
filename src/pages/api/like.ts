@@ -1,10 +1,15 @@
 import type { APIRoute } from "astro";
+import { env } from "cloudflare:workers";
 
-export const GET: APIRoute = async ({ request, locals }) => {
+interface LikeRequestBody {
+  pageId?: string;
+}
+
+export const GET: APIRoute = async ({ request }) => {
   const url = new URL(request.url);
   const pageId = url.searchParams.get("pageId") || "global";
 
-  const db = locals.cloudflare.env.DB;
+  const db = env.DB;
 
   const result = await db
     .prepare("SELECT likes FROM page_likes WHERE page_id = ?")
@@ -18,11 +23,11 @@ export const GET: APIRoute = async ({ request, locals }) => {
   });
 };
 
-export const POST: APIRoute = async ({ request, locals }) => {
-  const { pageId = "global" } = await request.json();
+export const POST: APIRoute = async ({ request }) => {
+  const { pageId = "global" } = await request.json<LikeRequestBody>();
 
-  const db = locals.cloudflare.env.DB;
-  const kv = locals.cloudflare.env.LIKES_RATE_LIMIT;
+  const db = env.DB;
+  const kv = env.LIKES_RATE_LIMIT;
 
   const clientIP = request.headers.get("cf-connecting-ip") || "unknown-ip";
   const rateLimitKey = `rate-limit:${pageId}:${clientIP}`;
