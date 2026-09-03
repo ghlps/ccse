@@ -51,6 +51,7 @@ import "../styles/global.css";
         </span>
         <div class="flex items-center gap-2">
           <a
+            id="github"
             href="https://github.com/tu-usuario/tu-repo"
             target="_blank"
             rel="noopener noreferrer"
@@ -243,6 +244,18 @@ import "../styles/global.css";
             >
             </h2>
             <div id="quiz-options" class="grid gap-2.5"></div>
+
+            <div id="comment-toggle-wrap">
+              <button
+                id="btn-toggle-comment"
+                disabled
+                class="cursor-not-allowed text-xs font-bold uppercase tracking-wider text-slate-400 dark:text-zinc-600 flex items-center gap-1 transition-colors"
+              >
+                <span id="toggle-comment-icon">▸</span>
+                <span>Ver explicación</span>
+              </button>
+            </div>
+
             <div
               id="quiz-comment"
               class="hidden text-sm font-medium leading-relaxed bg-slate-50 dark:bg-zinc-800/60 border border-slate-300 dark:border-zinc-700 px-4 py-3 text-slate-700 dark:text-zinc-300"
@@ -258,12 +271,14 @@ import "../styles/global.css";
               class="text-xs cursor-pointer font-bold uppercase tracking-wider text-slate-500 hover:text-slate-900 dark:text-zinc-400 dark:hover:text-zinc-100 transition"
               >← Salir</button
             >
-            <button
-              id="btn-next"
-              class="hidden px-6 py-2.5 bg-[#C60B1E] hover:bg-[#a00817] text-white text-sm font-bold rounded-none transition uppercase tracking-wider shadow-sm"
-            >
-              Siguiente
-            </button>
+            <div class="h-10 flex items-center">
+              <button
+                id="btn-next"
+                class="px-6 py-2.5 bg-[#C60B1E] hover:bg-[#a00817] text-white text-sm font-bold rounded-none transition uppercase tracking-wider shadow-sm"
+              >
+                Siguiente
+              </button>
+            </div>
           </div>
         </section>
 
@@ -310,6 +325,10 @@ import "../styles/global.css";
       const themeToggleIcon = document.getElementById("theme-toggle-icon");
       const themeToggleText = document.getElementById("theme-toggle-text");
 
+      const commentToggleWrap = document.getElementById("comment-toggle-wrap");
+      const btnToggleComment = document.getElementById("btn-toggle-comment");
+      const toggleCommentIcon = document.getElementById("toggle-comment-icon");
+
       function applyTheme(theme) {
         if (theme === "dark") {
           document.documentElement.classList.add("dark");
@@ -342,6 +361,8 @@ import "../styles/global.css";
       const quizProgress = document.getElementById("quiz-progress");
       const quizQuestion = document.getElementById("quiz-question");
       const quizOptions = document.getElementById("quiz-options");
+      const buttonLike = document.getElementById("like");
+      const buttonGithub = document.getElementById("github");
       const btnNext = document.getElementById("btn-next");
 
       const statCompleted = document.getElementById("stat-completed");
@@ -419,14 +440,22 @@ import "../styles/global.css";
           stats.completed += 1;
 
           const accuracy = total > 0 ? correct / total : 0;
-          const prevBestAccuracy = (() => {
-            if (stats.best === "N/A") return -1;
-            const match = /(\d+)\/(\d+)/.exec(stats.best);
-            if (!match) return -1;
-            return Number(match[1]) / Number(match[2]);
-          })();
 
-          if (accuracy > prevBestAccuracy) {
+          let prevBestCorrect = -1;
+          let prevBestAccuracy = -1;
+
+          if (stats.best !== "N/A") {
+            const match = /(\d+)\/(\d+)/.exec(stats.best);
+            if (match) {
+              prevBestCorrect = Number(match[1]);
+              prevBestAccuracy = prevBestCorrect / Number(match[2]);
+            }
+          }
+
+          if (
+            accuracy > prevBestAccuracy ||
+            (accuracy === prevBestAccuracy && correct >= prevBestCorrect)
+          ) {
             stats.best = `${correct}/${total}`;
           }
 
@@ -444,7 +473,6 @@ import "../styles/global.css";
         loadPracticeStats();
       }
 
-      // Quiz Engine
       function shuffle(array) {
         return [...array].sort(() => Math.random() - 0.5);
       }
@@ -506,8 +534,28 @@ import "../styles/global.css";
       function renderQuestion() {
         selectedOption = null;
         btnNext.classList.add("hidden");
+        buttonLike.classList.add("hidden");
+        buttonGithub.classList.add("hidden");
+
+        btnNext.classList.add("invisible");
+
         quizComment.classList.add("hidden");
         quizComment.textContent = "";
+
+        btnToggleComment.disabled = true;
+        btnToggleComment.classList.add(
+          "cursor-not-allowed",
+          "text-slate-400",
+          "dark:text-zinc-600",
+        );
+        btnToggleComment.classList.remove(
+          "cursor-pointer",
+          "text-[#C60B1E]",
+          "dark:text-[#FFC400]",
+          "hover:underline",
+        );
+        toggleCommentIcon.textContent = "▸";
+
         const q = activeQuestions[currentIndex];
 
         quizProgress.textContent = isPracticeMode
@@ -520,7 +568,7 @@ import "../styles/global.css";
           const btn = document.createElement("button");
           btn.className =
             "w-full text-left py-3 px-4 rounded-none bg-slate-50 dark:bg-zinc-800/60 hover:bg-slate-200 dark:hover:bg-zinc-800 border border-slate-300 dark:border-zinc-700 transition text-sm flex items-center justify-between font-medium";
-          btn.innerHTML = `<span>${opt}</span><span class="status-icon font-bold"></span>`;
+          btn.innerHTML = `<span>${opt}</span><span class="status-icon font-bold w-5 shrink-0 text-center inline-block whitespace-nowrap"></span>`;
           btn.onclick = () => selectOption(idx);
           quizOptions.appendChild(btn);
         });
@@ -584,11 +632,24 @@ import "../styles/global.css";
             );
             btn.querySelector(".status-icon").textContent = "✗";
           }
+
+          btnNext.classList.remove("invisible");
         });
 
         if (q.comment) {
           quizComment.textContent = q.comment;
-          quizComment.classList.remove("hidden");
+          btnToggleComment.disabled = false;
+          btnToggleComment.classList.remove(
+            "cursor-not-allowed",
+            "text-slate-400",
+            "dark:text-zinc-600",
+          );
+          btnToggleComment.classList.add(
+            "cursor-pointer",
+            "text-[#C60B1E]",
+            "dark:text-[#FFC400]",
+            "hover:underline",
+          );
         }
 
         answeredInSession++;
@@ -648,6 +709,11 @@ import "../styles/global.css";
         startQuiz(shuffle(allQuestions), "Modo Libre", true);
       };
 
+      btnToggleComment.onclick = () => {
+        const isHidden = quizComment.classList.toggle("hidden");
+        toggleCommentIcon.textContent = isHidden ? "▸" : "▾";
+      };
+
       document.querySelectorAll(".btn-section").forEach((btn) => {
         btn.onclick = () => {
           const sec = btn.getAttribute("data-section");
@@ -661,7 +727,6 @@ import "../styles/global.css";
         if (currentIndex < activeQuestions.length) {
           renderQuestion();
         } else if (isPracticeMode) {
-          // Se acabó el mazo: rebaraja y sigue indefinidamente
           activeQuestions = shuffle(allQuestions);
           currentIndex = 0;
           renderQuestion();
@@ -677,12 +742,16 @@ import "../styles/global.css";
         }
         quizView.classList.add("hidden");
         menuView.classList.remove("hidden");
+        buttonLike.classList.remove("hidden");
+        buttonGithub.classList.remove("hidden");
       };
 
       document.getElementById("btn-restart").onclick = () => {
         isPracticeMode = false;
         resultsView.classList.add("hidden");
         menuView.classList.remove("hidden");
+        buttonLike.classList.remove("hidden");
+        buttonGithub.classList.remove("hidden");
       };
 
       loadStats();
