@@ -326,7 +326,13 @@ import "../styles/global.css";
               class="text-xs cursor-pointer font-bold uppercase tracking-wider text-slate-500 hover:text-slate-900 dark:text-zinc-400 dark:hover:text-zinc-100 transition"
               >← Salir</button
             >
-            <div class="h-10 flex items-center">
+            <div class="h-10 flex items-center gap-2">
+              <button
+                id="btn-repeat"
+                class="hidden cursor-pointer px-4 py-2.5 bg-transparent border-2 border-slate-300 dark:border-zinc-700 hover:bg-slate-100 dark:hover:bg-zinc-800 text-slate-700 dark:text-zinc-300 text-sm font-bold rounded-none transition uppercase tracking-wider"
+              >
+                Repetir
+              </button>
               <button
                 id="btn-next"
                 class="px-6 py-2.5 bg-[#C60B1E] hover:bg-[#a00817] text-white text-sm font-bold rounded-none transition uppercase tracking-wider shadow-sm"
@@ -375,6 +381,7 @@ import "../styles/global.css";
       let answeredInSession = 0;
       let streak = 0;
       let bestStreakThisSession = 0;
+      let currentOptionOrder = [];
 
       // Theme logic
       const themeToggleBtn = document.getElementById("theme-toggle");
@@ -384,6 +391,7 @@ import "../styles/global.css";
       const commentToggleWrap = document.getElementById("comment-toggle-wrap");
       const btnToggleComment = document.getElementById("btn-toggle-comment");
       const toggleCommentIcon = document.getElementById("toggle-comment-icon");
+      const btnRepeat = document.getElementById("btn-repeat");
 
       function applyTheme(theme) {
         if (theme === "dark") {
@@ -696,6 +704,7 @@ import "../styles/global.css";
         buttonGithub.classList.add("hidden");
 
         btnNext.classList.add("invisible");
+        btnRepeat.classList.add("hidden");
 
         quizComment.classList.add("hidden");
         quizComment.textContent = "";
@@ -722,12 +731,15 @@ import "../styles/global.css";
         quizQuestion.textContent = q.question;
         quizOptions.innerHTML = "";
 
-        q.options.forEach((opt, idx) => {
+        currentOptionOrder = shuffle(q.options.map((_, i) => i));
+
+        currentOptionOrder.forEach((origIdx, displayIdx) => {
+          const opt = q.options[origIdx];
           const btn = document.createElement("button");
           btn.className =
             "w-full text-left py-3 px-4 rounded-none bg-slate-50 dark:bg-zinc-800/60 hover:bg-slate-200 dark:hover:bg-zinc-800 border border-slate-300 dark:border-zinc-700 transition text-sm flex items-center justify-between font-medium";
           btn.innerHTML = `<span>${opt}</span><span class="status-icon font-bold w-5 shrink-0 text-center inline-block whitespace-nowrap"></span>`;
-          btn.onclick = () => selectOption(idx);
+          btn.onclick = () => selectOption(displayIdx);
           quizOptions.appendChild(btn);
         });
 
@@ -762,16 +774,22 @@ import "../styles/global.css";
             : "Responde bien para empezar la racha";
       }
 
-      function selectOption(idx) {
+      function selectOption(displayIdx) {
         if (selectedOption !== null) return;
-        selectedOption = idx;
+        selectedOption = displayIdx;
+
+        btnNext.classList.remove("hidden");
+        btnRepeat.classList.remove("hidden");
 
         const q = activeQuestions[currentIndex];
         const buttons = quizOptions.querySelectorAll("button");
+        const selectedOrigIdx = currentOptionOrder[displayIdx];
 
         buttons.forEach((btn, i) => {
           btn.disabled = true;
-          if (i === q.correctAnswer) {
+          const origIdx = currentOptionOrder[i];
+
+          if (origIdx === q.correctAnswer) {
             btn.classList.add(
               "bg-green-400!",
               "dark:bg-emerald-950/80",
@@ -815,7 +833,7 @@ import "../styles/global.css";
         answeredInSession++;
         const qIndex = getQuestionIndex(q);
 
-        if (idx === q.correctAnswer) {
+        if (selectedOrigIdx === q.correctAnswer) {
           score++;
           wrongQuestions.delete(qIndex);
           if (isPracticeMode) {
@@ -833,7 +851,6 @@ import "../styles/global.css";
 
         btnNext.classList.remove("hidden");
       }
-
       function showResults() {
         quizView.classList.add("hidden");
         resultsView.classList.remove("hidden");
@@ -866,9 +883,12 @@ import "../styles/global.css";
         }
       }
 
-      // Event Listeners
       document.getElementById("btn-official").onclick = () => {
         startQuiz(generateOfficialExam(), "Examen Oficial (25 preguntas)");
+      };
+
+      btnRepeat.onclick = () => {
+        renderQuestion();
       };
 
       document.getElementById("btn-practice").onclick = () => {
