@@ -293,6 +293,11 @@ import "../styles/global.css";
           </div>
 
           <div class="space-y-4">
+            <p
+              id="quiz-section"
+              class="text-[11px] font-bold uppercase tracking-wider text-[#C60B1E] dark:text-[#FFC400]"
+            >
+            </p>
             <h2
               id="quiz-question"
               class="text-lg font-bold text-slate-900 dark:text-zinc-100 leading-snug"
@@ -415,11 +420,11 @@ import "../styles/global.css";
         applyTheme(nextTheme);
       });
 
-      // DOM Elements
       const quizComment = document.getElementById("quiz-comment");
       const menuView = document.getElementById("menu-view");
       const quizView = document.getElementById("quiz-view");
       const resultsView = document.getElementById("results-view");
+      const quizSection = document.getElementById("quiz-section");
 
       const quizCategory = document.getElementById("quiz-category");
       const quizProgress = document.getElementById("quiz-progress");
@@ -728,8 +733,14 @@ import "../styles/global.css";
         quizProgress.textContent = isPracticeMode
           ? `Pregunta ${answeredInSession + 1}`
           : `${currentIndex + 1}/${activeQuestions.length}`;
+        quizSection.textContent = q.section;
         quizQuestion.textContent = q.question;
-        quizOptions.innerHTML = "";
+
+        quizSection.textContent = q.section;
+        quizQuestion.textContent = q.question;
+        quizOptions.innerHTML = ""; // ← add this line back
+
+        currentOptionOrder = shuffle(q.options.map((_, i) => i));
 
         currentOptionOrder = shuffle(q.options.map((_, i) => i));
 
@@ -749,7 +760,7 @@ import "../styles/global.css";
       function renderStreak() {
         streakStack.innerHTML = "";
 
-        const maxVisible = 5; // was 12 — too many for mobile width
+        const maxVisible = 5;
         const visibleCount = Math.min(streak, maxVisible);
 
         for (let i = 0; i < visibleCount; i++) {
