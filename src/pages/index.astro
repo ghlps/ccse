@@ -155,6 +155,28 @@ import "../styles/global.css";
             </button>
           </div>
 
+          <div class="space-y-1">
+            <div class="flex gap-2">
+              <input
+                id="search-input"
+                type="text"
+                placeholder='Buscar por palabra clave (ej. "río", "rey", "IVA")…'
+                class="flex-1 py-2.5 px-3 bg-slate-50 dark:bg-zinc-800/60 border border-slate-300 dark:border-zinc-700 text-sm font-medium placeholder:text-slate-400 dark:placeholder:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-[#C60B1E] dark:focus:ring-[#FFC400] rounded-none"
+              />
+              <button
+                id="btn-search"
+                class="cursor-pointer px-4 py-2.5 bg-slate-900 dark:bg-zinc-100 text-white dark:text-zinc-900 font-bold text-sm uppercase tracking-wide hover:bg-slate-700 dark:hover:bg-white transition rounded-none"
+              >
+                Buscar
+              </button>
+            </div>
+            <p
+              id="search-feedback"
+              class="hidden text-xs text-rose-600 dark:text-rose-400 font-medium"
+            >
+            </p>
+          </div>
+
           <div class="space-y-3 pt-2">
             <h2
               class="text-xs uppercase font-bold tracking-wider text-slate-500 dark:text-zinc-400 border-b border-slate-200 dark:border-zinc-800 pb-1"
@@ -388,7 +410,6 @@ import "../styles/global.css";
       let bestStreakThisSession = 0;
       let currentOptionOrder = [];
 
-      // Theme logic
       const themeToggleBtn = document.getElementById("theme-toggle");
       const themeToggleIcon = document.getElementById("theme-toggle-icon");
       const themeToggleText = document.getElementById("theme-toggle-text");
@@ -439,6 +460,10 @@ import "../styles/global.css";
       const wrongCountEl = document.getElementById("wrong-count");
       const savedCountEl = document.getElementById("saved-count");
 
+      const searchInput = document.getElementById("search-input");
+      const btnSearch = document.getElementById("btn-search");
+      const searchFeedback = document.getElementById("search-feedback");
+
       const statCompleted = document.getElementById("stat-completed");
       const statLastScore = document.getElementById("stat-last-score");
       const statPracticeCompleted = document.getElementById(
@@ -452,7 +477,6 @@ import "../styles/global.css";
       const streakStack = document.getElementById("streak-stack");
       const streakLabel = document.getElementById("streak-label");
 
-      // LocalStorage Helpers
       function loadStats() {
         try {
           const stats = JSON.parse(
@@ -505,6 +529,58 @@ import "../styles/global.css";
         }
       }
 
+      function normalizeKeepLength(str) {
+        return str
+          .normalize("NFD")
+          .replace(/[\u0300-\u036f]/g, "")
+          .toLowerCase();
+      }
+
+      function escapeRegExp(str) {
+        return str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+      }
+
+      function buildWholeWordRegex(term) {
+        const normTerm = normalizeKeepLength(term.trim());
+        if (!normTerm) return null;
+        return new RegExp(`\\b${escapeRegExp(normTerm)}\\b`, "gi");
+      }
+
+      function runSearch() {
+        const raw = searchInput.value.trim();
+        if (!raw) return;
+
+        const regex = buildWholeWordRegex(raw);
+        if (!regex) return;
+
+        const matches = allQuestions.filter((q) => {
+          const haystack = normalizeKeepLength(
+            [q.question, ...q.options, q.comment, q.section].join(" "),
+          );
+          regex.lastIndex = 0;
+          return regex.test(haystack);
+        });
+
+        if (matches.length === 0) {
+          searchFeedback.textContent = `Sin resultados para "${raw}".`;
+          searchFeedback.classList.remove("hidden");
+          return;
+        }
+
+        searchFeedback.classList.add("hidden");
+        startQuiz(
+          shuffle(matches),
+          `Búsqueda: "${raw}" (${matches.length})`,
+          true,
+          regex,
+        );
+      }
+
+      btnSearch.onclick = runSearch;
+      searchInput.addEventListener("keydown", (e) => {
+        if (e.key === "Enter") runSearch();
+      });
+
       function savePracticeStats(correct, total, sessionBestStreak = 0) {
         try {
           const stats = JSON.parse(
@@ -547,7 +623,6 @@ import "../styles/global.css";
         loadPracticeStats();
       }
 
-      // Saved questions ("read later") + wrong questions tracking
       function getQuestionIndex(q) {
         return allQuestions.indexOf(q);
       }
@@ -647,7 +722,12 @@ import "../styles/global.css";
         return [...array].sort(() => Math.random() - 0.5);
       }
 
-      function startQuiz(questionsList, categoryName, practiceMode = false) {
+      function startQuiz(
+        questionsList,
+        categoryName,
+        practiceMode = false,
+        searchRegex = null,
+      ) {
         activeQuestions = questionsList;
         practicePool = practiceMode ? questionsList : null;
         currentIndex = 0;
@@ -656,6 +736,7 @@ import "../styles/global.css";
         streak = 0;
         bestStreakThisSession = 0;
         isPracticeMode = practiceMode;
+        currentSearchRegex = searchRegex;
         quizCategory.textContent = categoryName;
 
         menuView.classList.add("hidden");
@@ -670,7 +751,6 @@ import "../styles/global.css";
           streakZone.classList.remove("flex");
         }
         renderStreak();
-
         renderQuestion();
       }
 
@@ -738,7 +818,7 @@ import "../styles/global.css";
 
         quizSection.textContent = q.section;
         quizQuestion.textContent = q.question;
-        quizOptions.innerHTML = ""; // ← add this line back
+        quizOptions.innerHTML = "";
 
         currentOptionOrder = shuffle(q.options.map((_, i) => i));
 
