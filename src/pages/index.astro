@@ -278,16 +278,16 @@ import "../styles/global.css";
 
           <div
             id="streak-zone"
-            class="hidden items-center justify-end gap-1 -mt-1"
+            class="hidden items-center justify-end gap-1.5 -mt-1 flex-nowrap"
           >
             <div
               id="streak-stack"
-              class="flex flex-wrap-reverse content-end justify-end gap-0.5"
+              class="flex flex-nowrap items-center justify-end gap-0.5 overflow-hidden"
             >
             </div>
             <p
               id="streak-label"
-              class="text-xs font-black uppercase tracking-wider text-[#C60B1E] dark:text-[#FFC400]"
+              class="text-xs font-black uppercase tracking-wider text-[#C60B1E] dark:text-[#FFC400] whitespace-nowrap shrink-0"
             >
             </p>
           </div>
@@ -749,14 +749,14 @@ import "../styles/global.css";
       function renderStreak() {
         streakStack.innerHTML = "";
 
-        const maxVisible = 12;
+        const maxVisible = 5; // was 12 — too many for mobile width
         const visibleCount = Math.min(streak, maxVisible);
 
         for (let i = 0; i < visibleCount; i++) {
           const pan = document.createElement("div");
           pan.textContent = "🥘";
           pan.className =
-            "streak-pan text-xl leading-none drop-shadow-md w-6 h-6 flex items-center justify-center shrink-0";
+            "streak-pan text-base leading-none drop-shadow-md w-5 h-5 flex items-center justify-center shrink-0";
           streakStack.appendChild(pan);
         }
 
@@ -764,14 +764,12 @@ import "../styles/global.css";
           const badge = document.createElement("div");
           badge.textContent = `+${streak - maxVisible}`;
           badge.className =
-            "streak-pan text-xs font-black text-[#C60B1E] dark:text-[#FFC400] flex items-center";
+            "streak-pan text-xs font-black text-[#C60B1E] dark:text-[#FFC400] flex items-center shrink-0";
           streakStack.appendChild(badge);
         }
 
         streakLabel.textContent =
-          streak > 0
-            ? `🔥 Racha: ${streak}`
-            : "Responde bien para empezar la racha";
+          streak > 0 ? `🔥 ${streak}` : "Responde bien para empezar la racha";
       }
 
       function selectOption(displayIdx) {
